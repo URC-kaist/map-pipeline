@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-14",
+  "tested_source_commit": "256f9415080791c7006111a8151f8e308817ea9d",
+  "checkout": "independent temporary Git clone on existing Ubuntu 22.04 host; no sibling lidar or mr2-stack",
+  "source_archives": "all 9 independently downloaded by curl; byte hashes match baseline",
+  "synthetic_tests": {
+    "lidar_passed": 7,
+    "lidar_optional_legacy_skipped": 1,
+    "rgb_generation_server_optional_viewer_passed": 1
+  },
+  "outputs": {
+    "Lidar-pipeline": {
+      "all_manifest_hashes_verified": true,
+      "baseline_products_all_identical": true,
+      "cells": 80000000
+    },
+    "RGB-pipeline": {
+      "all_manifest_hashes_verified": true,
+      "tile_count": 1983,
+      "baseline_tiles_all_identical": true,
+      "tile_bytes": 147485541,
+      "viewer_or_vendor_present": false,
+      "no_node_or_maplibre_required": true
+    }
+  }
+}

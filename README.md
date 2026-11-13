@@ -41,7 +41,9 @@ Prepare any MapLibre GL JS package separately, then add its local assets:
 This package must include `dist/maplibre-gl.js`, `dist/maplibre-gl.css`,
 `package.json` and `LICENSE.txt`. For example, prepare MapLibre 4.7.1 in a
 separate tools directory using `npm pack maplibre-gl@4.7.1` and extract that
-package there. It is an optional acquisition step, not part of map conversion.
+package there. Alternatively, download the package tarball with curl from
+`https://registry.npmjs.org/maplibre-gl/-/maplibre-gl-4.7.1.tgz`; Node/npm are
+not required to serve browser assets. It is an optional acquisition step, not part of map conversion.
 The demo was tested with 4.7.1; `mr2-stack/node_modules` is just one possible
 local asset source and is no longer hardcoded or necessary.
 

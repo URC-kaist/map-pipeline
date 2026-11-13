@@ -1,0 +1,47 @@
+[
+  {
+    "path": "Lidar/12SWH1848.zip",
+    "status": "downloaded and verified",
+    "bytes": 18240840
+  },
+  {
+    "path": "Lidar/12SWH1850.zip",
+    "status": "downloaded and verified",
+    "bytes": 19446779
+  },
+  {
+    "path": "Lidar/12SWH1852.zip",
+    "status": "downloaded and verified",
+    "bytes": 1430898
+  },
+  {
+    "path": "Lidar/12SWH1952.zip",
+    "status": "downloaded and verified",
+    "bytes": 2115639
+  },
+  {
+    "path": "Lidar/12SWH2048.zip",
+    "status": "downloaded and verified",
+    "bytes": 17800499
+  },
+  {
+    "path": "Lidar/12SWH2050.zip",
+    "status": "downloaded and verified",
+    "bytes": 20767652
+  },
+  {
+    "path": "Lidar/12SWH2052.zip",
+    "status": "downloaded and verified",
+    "bytes": 2665308
+  },
+  {
+    "path": "Lidar/12SWH2152.zip",
+    "status": "downloaded and verified",
+    "bytes": 3424139
+  },
+  {
+    "path": "RGB/q3128_se_NAIP2024_RGB.zip",
+    "status": "downloaded and verified",
+    "bytes": 12960604
+  }
+]
