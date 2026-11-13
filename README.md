@@ -105,6 +105,6 @@ make test
 Small synthetic checks need no source downloads or Node installation. Optional
 PDAL/legacy-code comparisons skip when their inputs/dependencies are absent.
 Real-data checks, optional browser checks, native Nav2 decoding and past
-implementation findings are described in the workflow READMEs. CI is prepared
-but has not yet run on GitHub. Source-data terms and third-party licenses remain
+implementation findings are described in the workflow READMEs. The [initial GitHub CI run](https://github.com/URC-kaist/map-pipeline/actions/runs/43455153377)
+passed after publication. Source-data terms and third-party licenses remain
 separate from the undecided code license.

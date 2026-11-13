@@ -13,8 +13,9 @@ The earlier [review](docs/release-review-2026-11-14.md) is archived. Current cha
   follows its own terms. Source binaries and generated products remain outside
   Git; the repository destination is URC-kaist/map-pipeline.
 
-The repository is being published as URC-kaist/map-pipeline, superseding
-URC-kaist/lidar. The latter is retained as a development archive. An openly
+The private repository is published as URC-kaist/map-pipeline, superseding
+URC-kaist/lidar. The latter is archived with a migration notice and homepage
+pointing to its successor. The published checkout and initial GitHub CI passed. An openly
 licensed public release would still require a code-license decision. Field registration
 and runtime Nav2 cropper integration remain explicit limitations rather than
 claims of completion. Existing LiDAR numerical algorithms were not changed.

@@ -26,8 +26,8 @@ verifies that no viewer/Node dependency is accessed, tests serving metadata over
 localhost and checks optional viewer failure/success independently. It downloads
 no data. Its HTTP socket must be permitted by the execution environment.
 
-`.github/workflows/test.yml` runs the same checks on Ubuntu 22.04. The workflow
-is prepared locally; no hosted CI run is claimed before publishing.
+`.github/workflows/test.yml` runs the same checks on Ubuntu 22.04. The initial hosted run passed after publication; see
+[publication verification](docs/publication.json).
 
 Additional checks:
 

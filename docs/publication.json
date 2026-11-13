@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-14",
+  "repository": "https://github.com/URC-kaist/map-pipeline",
+  "visibility": "private (matched predecessor)",
+  "verified_source_commit": "b9dcd6b5787870225d667c707a3ab1bb2edd2352",
+  "published_checkout_tests": "passed; no source ZIPs/TIFFs/TFWs tracked",
+  "initial_ci": "https://github.com/URC-kaist/map-pipeline/actions/runs/43455153377",
+  "initial_ci_conclusion": "success",
+  "predecessor": "https://github.com/URC-kaist/lidar",
+  "predecessor_archived": true,
+  "predecessor_migration_readme_commit": "dbac86e6ae45a714a224162300fd545c5bee0bf8",
+  "code_license": "undecided by user request",
+  "versioned_github_release_created": false
+}
