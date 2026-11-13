@@ -1,0 +1,14 @@
+{
+  "input": "../../Lidar/bare_earth_2018_0p5m.tif",
+  "source_vertical_datum": "unknown; no vertical conversion requested",
+  "target_crs": "+proj=aeqd +lat_0=38.406739 +lon_0=-110.791394 +datum=WGS84 +units=m +type=crs",
+  "anchor": {
+    "crs": "EPSG:4326",
+    "longitude": -110.791394,
+    "latitude": 38.406739
+  },
+  "bounds": [-500, -500, 500, 500],
+  "resolution_m": 0.4,
+  "resampling": "bilinear",
+  "full_cost_slope_deg": 45.0
+}

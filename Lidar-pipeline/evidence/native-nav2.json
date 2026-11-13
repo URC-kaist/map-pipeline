@@ -1,0 +1,10 @@
+{
+  "native_loader": "/opt/ros/humble/lib/libmap_io.so",
+  "result": "every decoded cell equals the expected vertically flipped raw cost",
+  "cells_compared": 80000000,
+  "unknown_cells": 7015755,
+  "loader_log": "8000 10000 0.5\n[INFO] [1794576522.393513506] [map_io]: Loading yaml file: /home/menny/ark_2026_11_13/map-pipeline-testing/Lidar-pipeline/output/mdrs-east/map.yaml\n[INFO] [1794576522.393739658] [map_io]: resolution: 0.5\n[INFO] [1794576522.393749775] [map_io]: origin[0]: 3.3062e-08\n[INFO] [1794576522.393753566] [map_io]: origin[1]: -2500\n[INFO] [1794576522.393755886] [map_io]: origin[2]: 0\n[INFO] [1794576522.393758353] [map_io]: free_thresh: 0.196\n[INFO] [1794576522.393760880] [map_io]: occupied_thresh: 0.65\n[INFO] [1794576522.393763115] [map_io]: mode: raw\n[INFO] [1794576522.393766299] [map_io]: negate: 0\n[INFO] [1794576522.400784091] [map_io]: Loading image_file: /home/menny/ark_2026_11_13/map-pipeline-testing/Lidar-pipeline/output/mdrs-east/occupancy.png\n[INFO] [1794576531.424299187] [map_io]: Read map /home/menny/ark_2026_11_13/map-pipeline-testing/Lidar-pipeline/output/mdrs-east/occupancy.png: 8000 X 10000 map @ 0.5 m/cell\n",
+  "verified_png_sha256": "b1d5fc777a63cc06e5d18f5fbc262fa737881f63ef49e0f59a88f9bf13ab846b",
+  "verified_yaml_sha256": "beaeb72b0d4f16fbc9b32831f29d1a902fa4b2fac195b702a712882677793924",
+  "final_output_equals_checked_baseline": true
+}

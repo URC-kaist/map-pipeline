@@ -1,0 +1,44 @@
+{
+  "mosaic_vs_default_dem": "all elevations and NoData identical",
+  "cells_compared": 80000000,
+  "metadata": {
+    "mdrs-east": {
+      "size": [
+        8000,
+        10000
+      ],
+      "resolution_m": 0.5,
+      "elevation_range_m": [
+        1322.4599609375,
+        1447.7099609375
+      ],
+      "valid_elevation_pixels": 73019745,
+      "valid_slope_pixels": 72984245,
+      "unknown_cost_pixels": 7015755,
+      "yaml_origin_lower_left": [
+        3.306195139884949e-08,
+        -2499.9999999962747,
+        0.0
+      ]
+    },
+    "legacy-aeqd": {
+      "size": [
+        2500,
+        2500
+      ],
+      "resolution_m": 0.4,
+      "elevation_range_m": [
+        1363.7769775390625,
+        1413.676025390625
+      ],
+      "valid_elevation_pixels": 4459496,
+      "valid_slope_pixels": 4450926,
+      "unknown_cost_pixels": 1799074,
+      "yaml_origin_lower_left": [
+        -500.0,
+        -500.0,
+        0.0
+      ]
+    }
+  }
+}

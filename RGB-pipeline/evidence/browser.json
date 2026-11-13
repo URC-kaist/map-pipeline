@@ -1,0 +1,66 @@
+{
+  "overview": {
+    "zoom": 13.216607057495233,
+    "center": {
+      "lng": -110.77093805142687,
+      "lat": 38.40250489600507
+    }
+  },
+  "zoomChecks": [
+    {
+      "zoom": 14,
+      "center": {
+        "lng": -110.77096,
+        "lat": 38.4025
+      }
+    },
+    {
+      "zoom": 15,
+      "center": {
+        "lng": -110.77096,
+        "lat": 38.4025
+      }
+    },
+    {
+      "zoom": 16,
+      "center": {
+        "lng": -110.77096,
+        "lat": 38.4025
+      }
+    },
+    {
+      "zoom": 17,
+      "center": {
+        "lng": -110.77096,
+        "lat": 38.4025
+      }
+    }
+  ],
+  "overzoom": {
+    "zoom": 22,
+    "center": {
+      "lng": -110.77096,
+      "lat": 38.4025
+    }
+  },
+  "panned": {
+    "zoom": 22,
+    "center": {
+      "lng": -110.77094323619383,
+      "lat": 38.402489490214464
+    }
+  },
+  "requestedZooms": [
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "tileRequests": 103,
+  "externalRequests": [],
+  "httpFailures": [],
+  "exceptions": [],
+  "external_network": "Page requests intercepted: only this localhost origin, blob and data allowed; cache disabled",
+  "passed": true
+}

@@ -1,0 +1,20 @@
+Created /tmp/tmp33e3v9m1/horizontal: 29x31, 0.5 m/cell; 116 unknown cost cells
+Created /tmp/tmp_xdaz51d/first: 29x31, 0.5 m/cell; 125 unknown cost cells
+Created /tmp/tmp_xdaz51d/second: 29x31, 0.5 m/cell; 125 unknown cost cells
+Created /tmp/tmp3l3k9znu/reprojected: 16x16, 0.5 m/cell; 60 unknown cost cells
+Created /tmp/tmpwpsf5b8e/ground: 10x10, 0.5 m/cell; 36 unknown cost cells
+Created /tmp/tmpj0dqh9uw/terrain: 29x31, 0.5 m/cell; 125 unknown cost cells
+Created /tmp/tmpj0dqh9uw/mesh: 110 triangles
+test_analytic_plane_and_unknown_neighborhood (__main__.TerrainChecks) ... ok
+test_compound_input_preserves_elevations (__main__.TerrainChecks) ... ok
+test_end_to_end_and_reproducibility (__main__.TerrainChecks) ... ok
+test_explicit_reprojection (__main__.TerrainChecks) ... ok
+test_ground_class_pointcloud_path (__main__.TerrainChecks) ... ok
+test_legacy_horn_magnitude (__main__.TerrainChecks) ... ok
+test_mesh_coordinates_holes_and_binary_format (__main__.TerrainChecks) ... ok
+test_rejects_bad_geometry_and_parameters (__main__.TerrainChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.361s
+
+OK

@@ -1,0 +1,44 @@
+{
+  "mdrs-east": {
+    "complete": true,
+    "manifest_hashes_verified": true,
+    "source_snapshot_matches_current_script": true,
+    "baseline_file_hash_matches": {
+      "dem.tif": true,
+      "slope_degrees.tif": true,
+      "slope_x_norm.png": true,
+      "metadata.json": true,
+      "slope_magnitude.tif": true,
+      "heightmap_norm.png": true,
+      "occupancy.png": true,
+      "slope.png": true,
+      "slope_y_norm.png": true,
+      "validity.tif": true,
+      "map.yaml": true,
+      "config.json": true,
+      "slope_length_norm.png": true
+    }
+  },
+  "legacy-aeqd": {
+    "complete": true,
+    "manifest_hashes_verified": true,
+    "source_snapshot_matches_current_script": true,
+    "baseline_file_hash_matches": {
+      "dem.tif": true,
+      "slope_degrees.tif": true,
+      "slope_x_norm.png": true,
+      "metadata.json": true,
+      "slope_magnitude.tif": true,
+      "heightmap_norm.png": true,
+      "occupancy.png": true,
+      "slope.png": true,
+      "slope_y_norm.png": true,
+      "validity.tif": true,
+      "map.yaml": true,
+      "config.json": true,
+      "slope_length_norm.png": true
+    }
+  },
+  "legacy_sources_unchanged": true,
+  "current_pipeline_sha256": "ba03f1788d1e0301752339fb3fb1e6acbe84fc6bf701b6375560793b890af7a1"
+}

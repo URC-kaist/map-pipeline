@@ -1,0 +1,286 @@
+{
+  "gdal": "GDAL 3.4.1, released 2021/12/27",
+  "input": "RGB/q3128_se_NAIP2024_RGB.tif",
+  "input_sha256": "90905b19cd2e0d746ba879086a140b5e962bbb45689ed15732d5c664a1a2224a",
+  "approx_full_wgs84_bounds": [
+    -110.81266117313409,
+    38.374881566835306,
+    -110.74978666082097,
+    38.43761642474868
+  ],
+  "full_mercator_bbox": [
+    -12335609.015240844,
+    4632520.206816644,
+    -12328609.856546273,
+    4641432.131431034
+  ],
+  "dem_mercator_bbox": [
+    -12333522.141787117,
+    4633236.530739598,
+    -12328406.695369065,
+    4639650.150200171
+  ],
+  "common_envelope_mercator_bbox": [
+    -12333522.141787117,
+    4633236.530739598,
+    -12328609.856546273,
+    4639650.150200171
+  ],
+  "tile_size": 256,
+  "scheme": "xyz",
+  "rows": [
+    {
+      "zoom": 14,
+      "approx_ground_m_per_pixel": 7.487252539836354,
+      "full": {
+        "x_range": [
+          3148,
+          3151
+        ],
+        "y_range": [
+          6294,
+          6298
+        ],
+        "tiles": 20
+      },
+      "dem_crop_envelope": {
+        "x_range": [
+          3149,
+          3151
+        ],
+        "y_range": [
+          6295,
+          6297
+        ],
+        "tiles": 9
+      }
+    },
+    {
+      "zoom": 15,
+      "approx_ground_m_per_pixel": 3.743626269918177,
+      "full": {
+        "x_range": [
+          6297,
+          6303
+        ],
+        "y_range": [
+          12588,
+          12596
+        ],
+        "tiles": 63
+      },
+      "dem_crop_envelope": {
+        "x_range": [
+          6299,
+          6303
+        ],
+        "y_range": [
+          12590,
+          12595
+        ],
+        "tiles": 30
+      }
+    },
+    {
+      "zoom": 16,
+      "approx_ground_m_per_pixel": 1.8718131349590885,
+      "full": {
+        "x_range": [
+          12595,
+          12606
+        ],
+        "y_range": [
+          25177,
+          25192
+        ],
+        "tiles": 192
+      },
+      "dem_crop_envelope": {
+        "x_range": [
+          12598,
+          12606
+        ],
+        "y_range": [
+          25180,
+          25191
+        ],
+        "tiles": 108
+      }
+    },
+    {
+      "zoom": 17,
+      "approx_ground_m_per_pixel": 0.9359065674795443,
+      "full": {
+        "x_range": [
+          25190,
+          25213
+        ],
+        "y_range": [
+          50355,
+          50384
+        ],
+        "tiles": 720
+      },
+      "dem_crop_envelope": {
+        "x_range": [
+          25197,
+          25213
+        ],
+        "y_range": [
+          50361,
+          50382
+        ],
+        "tiles": 374
+      }
+    },
+    {
+      "zoom": 18,
+      "approx_ground_m_per_pixel": 0.46795328373977213,
+      "full": {
+        "x_range": [
+          50380,
+          50426
+        ],
+        "y_range": [
+          100710,
+          100769
+        ],
+        "tiles": 2820
+      },
+      "dem_crop_envelope": {
+        "x_range": [
+          50394,
+          50426
+        ],
+        "y_range": [
+          100722,
+          100764
+        ],
+        "tiles": 1419
+      }
+    },
+    {
+      "zoom": 19,
+      "approx_ground_m_per_pixel": 0.23397664186988607,
+      "full": {
+        "x_range": [
+          100761,
+          100852
+        ],
+        "y_range": [
+          201421,
+          201538
+        ],
+        "tiles": 10856
+      },
+      "dem_crop_envelope": {
+        "x_range": [
+          100788,
+          100852
+        ],
+        "y_range": [
+          201445,
+          201528
+        ],
+        "tiles": 5460
+      }
+    },
+    {
+      "zoom": 20,
+      "approx_ground_m_per_pixel": 0.11698832093494303,
+      "full": {
+        "x_range": [
+          201522,
+          201705
+        ],
+        "y_range": [
+          402843,
+          403076
+        ],
+        "tiles": 43056
+      },
+      "dem_crop_envelope": {
+        "x_range": [
+          201577,
+          201705
+        ],
+        "y_range": [
+          402890,
+          403057
+        ],
+        "tiles": 21672
+      }
+    },
+    {
+      "zoom": 21,
+      "approx_ground_m_per_pixel": 0.058494160467471516,
+      "full": {
+        "x_range": [
+          403045,
+          403411
+        ],
+        "y_range": [
+          805686,
+          806153
+        ],
+        "tiles": 171756
+      },
+      "dem_crop_envelope": {
+        "x_range": [
+          403154,
+          403411
+        ],
+        "y_range": [
+          805780,
+          806115
+        ],
+        "tiles": 86688
+      }
+    },
+    {
+      "zoom": 22,
+      "approx_ground_m_per_pixel": 0.029247080233735758,
+      "full": {
+        "x_range": [
+          806090,
+          806823
+        ],
+        "y_range": [
+          1611373,
+          1612306
+        ],
+        "tiles": 685556
+      },
+      "dem_crop_envelope": {
+        "x_range": [
+          806309,
+          806823
+        ],
+        "y_range": [
+          1611560,
+          1612231
+        ],
+        "tiles": 346080
+      }
+    }
+  ],
+  "totals": {
+    "14-18": {
+      "full": 3815,
+      "dem_crop_envelope": 1940
+    },
+    "14-19": {
+      "full": 14671,
+      "dem_crop_envelope": 7400
+    },
+    "14-20": {
+      "full": 57727,
+      "dem_crop_envelope": 29072
+    },
+    "14-22": {
+      "full": 915039,
+      "dem_crop_envelope": 461840
+    }
+  },
+  "limitations": "Bounding-envelope estimates, not actual generated counts. Cutline and transparent-edge exclusions can reduce counts. No file-size or speed benchmark performed."
+}

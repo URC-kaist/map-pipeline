@@ -1,0 +1,15 @@
+{
+  "repository_remote": "https://github.com/URC-kaist/lidar.git",
+  "head": "2489b0ef20da5f55644d5cef0f751ea36401fa13",
+  "status": "",
+  "source_sha256": {
+    "README.md": "7c0f309f3762f8de1a3f604cc6aa0f3ffad3f3bb062d52f68190545bc92cebb9",
+    "make_gradient_map.sh": "54f74626ca1174bbb61104e406cdd09bae6ff3fc39a39ad0bb12ac11936be9ab",
+    "filter.py": "2ed618df12d7f6bab77a5f0d2852808bfe272fd95b286a3669b76953d8a8b7d4",
+    "pipeline.json": "4a46f96e3a9b237df94d6603c8d8185638577334d36fafdc42129b81c6b603e1",
+    "fill.py": "94e2476f3f74c46262167bf79994862cb04393be552af4f06882b7adb5d3621a",
+    "tif_to_stl.py": "f7abab11070f7ea54143f97d00b288c6e234b484879f02435fcf1f69b2f20a0c",
+    "tif_to_obj.py": "fc5a9d7cb9b172feffe04a1aab19d3ee08ab52fadee33e259cb2e6decacad925",
+    "download_naip_patch.py": "71cae60accf3a42540842551be4f9a0fbaae391a516b3a9e8b966489fe5cd781"
+  }
+}

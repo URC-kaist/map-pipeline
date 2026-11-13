@@ -1,0 +1,31 @@
+[
+  {
+    "command": [
+      "gdalwarp",
+      "-t_srs",
+      "EPSG:4326",
+      "/tmp/lidar-audit-b0f0swfi/patch.tif",
+      "/tmp/lidar-audit-b0f0swfi/wgs84.tif"
+    ],
+    "returncode": 0,
+    "stdout": "Creating output file that is 36P x 28L.\nProcessing /tmp/lidar-audit-b0f0swfi/patch.tif [1/1] : 0Using internal nodata values (e.g. -9999) for image /tmp/lidar-audit-b0f0swfi/patch.tif.\nCopying nodata values from source /tmp/lidar-audit-b0f0swfi/patch.tif to destination /tmp/lidar-audit-b0f0swfi/wgs84.tif.\n...10...20...30...40...50...60...70...80...90...100 - done.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "gdalwarp",
+      "-s_srs",
+      "EPSG:4326",
+      "-t_srs",
+      "+proj=topocentric +lat_0=38.406739 +lon_0=-110.791394 +h_0=0 +datum=WGS84",
+      "-tr",
+      "0.4",
+      "0.4",
+      "/tmp/lidar-audit-b0f0swfi/wgs84.tif",
+      "/tmp/lidar-audit-b0f0swfi/enu.tif"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR 1: PROJ: pipeline: Pipeline: Mismatched units between step 2 and 3\nERROR 1: PROJ: pipeline: Pipeline: Mismatched units between step 2 and 3\nERROR 1: Too many points (441 out of 441) failed to transform, unable to compute output bounds.\n"
+  }
+]

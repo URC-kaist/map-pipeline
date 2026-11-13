@@ -1,0 +1,70 @@
+{
+  "id": "747a5deabc6e46e9bec5594ce0993612",
+  "owner": "UtahAGRC",
+  "ownerId": "fbafb9ec310164ef3e1252d50df36c2a",
+  "orgId": "99lidPhWCzftIe9K",
+  "created": 1758216390000,
+  "modified": 1758661564000,
+  "guid": null,
+  "name": null,
+  "title": "Utah Aerial Photography Tiles",
+  "type": "Feature Service",
+  "typeKeywords": [
+    "ArcGIS Server",
+    "Data",
+    "Feature Access",
+    "Feature Service",
+    "Metadata",
+    "Service",
+    "Singlelayer",
+    "Hosted Service"
+  ],
+  "description": "<p><span style='background-color:#ffffff; color:#222222; font-family:Arial,sans-serif; font-size:11pt;'><span style='font-style:normal; font-variant:normal; font-weight:400; text-decoration:none;'>This dataset represents the boundaries of the aerial photography available for download.<\/span><\/span><\/p>",
+  "tags": [
+    "Indices",
+    "Backup"
+  ],
+  "snippet": "GIS mapping data representing the boundaries of the aerial photography available for download.",
+  "thumbnail": "thumbnail/ago_downloaded.png",
+  "documentation": null,
+  "extent": [
+    [
+      -114.36321522483698,
+      36.70924852170759
+    ],
+    [
+      -108.62739825516076,
+      42.13828193488806
+    ]
+  ],
+  "categories": [],
+  "spatialReference": "102100",
+  "accessInformation": null,
+  "classification": null,
+  "licenseInfo": "<p>The data, including but not limited to geographic data, tabular data, and analytical data, are provided \"as is\" and \"as available\", with no guarantees relating to the availability, completeness, or accuracy of data, and without any express or implied warranties. These data are provided as a public service for informational purposes only. You are solely responsible for obtaining the proper evaluation of a location and associated data by a qualified professional. UGRC reserves the right to change, revise, suspend or discontinue published data and services without notice at any time. Neither UGRC nor the State of Utah are responsible for any misuse or misrepresentation of the data. UGRC and the State of Utah are not obligated to provide you with any maintenance or support. The user assumes the entire risk as to the quality and performance of the data. You agree to hold the State of Utah harmless for any claims, liability, costs, and damages relating to your use of the data. You agree that your sole remedy for any dissatisfaction or claims is to discontinue use of the data.<\/p><p><a target='_blank' href='https://creativecommons.org/licenses/by/4.0/' rel='nofollow ugc noopener noreferrer'><img style='border-width:0;' src='https://i.creativecommons.org/l/by/4.0/88x31.png' alt='Creative Commons License' width='88' height='31' /><\/a><br />This work is licensed under a <a target='_blank' href='https://creativecommons.org/licenses/by/4.0/' rel='nofollow ugc noopener noreferrer'>Creative Commons Attribution 4.0 International License<\/a>.<\/p>",
+  "culture": "en-us",
+  "properties": {"indexJobUrl": "https://services1.arcgis.com/99lidPhWCzftIe9K/ArcGIS/rest/admin/services/Aerial_Photography/FeatureServer/0/addToDefinition/73b7b2c2-8ccf-4c44-bd83-68c57e6d3306"},
+  "advancedSettings": null,
+  "url": "https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/Aerial_Photography/FeatureServer",
+  "proxyFilter": null,
+  "access": "public",
+  "size": 152518656,
+  "subInfo": 0,
+  "appCategories": [],
+  "industries": [],
+  "languages": [],
+  "largeThumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "listed": false,
+  "commentsEnabled": true,
+  "numComments": 0,
+  "numRatings": 0,
+  "avgRating": 0,
+  "numViews": 1940,
+  "scoreCompleteness": 85,
+  "groupDesignations": null,
+  "apiToken1ExpirationDate": -1,
+  "apiToken2ExpirationDate": -1,
+  "lastViewed": 1794574800000
+}

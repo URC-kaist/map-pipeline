@@ -1,0 +1,8 @@
+{
+  "input": "../../RGB/q3128_se_NAIP2024_RGB.tif",
+  "crop_dem": "../../Lidar/bare_earth_2018_0p5m.tif",
+  "minzoom": 14,
+  "maxzoom": 18,
+  "display_maxzoom": 22,
+  "processes": 4
+}
