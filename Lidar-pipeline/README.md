@@ -1,7 +1,7 @@
 # Reproducible terrain and navigation maps
 
 This is the working replacement for `~/lidar`'s terrain-generation procedure,
-within the future **cartographer** project. It accepts an elevation GeoTIFF or
+within **URC-kaist/map-pipeline**. It accepts an elevation GeoTIFF or
 an explicitly configured ground-class point cloud, and generates terrain
 features, a Nav2 cost map, metadata and optional simulation meshes. All
 processing uses local files and runs offline.
@@ -224,7 +224,7 @@ were also checked. See [reproducibility evidence](evidence/reproducibility.json)
 retains the initial run for full-size reproducibility comparison; it is generated
 evidence, not another source dataset. Outputs are intentionally not tracked by
 the local `.gitignore`. Publishing source materials or selected generated maps
-will be decided during the future cartographer cleanup.
+are kept outside normal source commits; see the root data policy.
 
 No robot motion, runtime map loading, RGB dashboard XYZ generation, field
 registration check or GitHub publication was performed in this task.

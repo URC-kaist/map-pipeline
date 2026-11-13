@@ -1,11 +1,14 @@
-# Cartographer
+# Map Pipeline
 
 Reproducible offline map generation for the MR2 rover: bare-earth DEMs to
 terrain/Nav2 cost maps, and RGB imagery to dashboard XYZ tiles.
 
-This is the local `0.1.0-dev` preparation of the intended
-`URC-mr2/cartographer` repository. No GitHub repository or release has been
-published. The code license is intentionally [undecided](CODE-LICENSE.md).
+Repository: **[URC-kaist/map-pipeline](https://github.com/URC-kaist/map-pipeline)**.
+Version: `0.1.0-dev`. The code license is intentionally [undecided](CODE-LICENSE.md).
+
+This project supersedes [URC-kaist/lidar](https://github.com/URC-kaist/lidar).
+That repository is retained as a read-only development archive for the original
+LiDAR processing experiments. Use this repository for current procedures.
 
 ## Quickstart
 

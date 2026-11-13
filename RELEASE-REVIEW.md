@@ -10,12 +10,12 @@ The earlier [review](docs/release-review-2026-11-14.md) is archived. Current cha
 - Root quickstart, environment instructions, optional dependency boundaries and
   synthetic CI checks are present. Fresh-checkout results are recorded in docs/.
 - The source code license remains undecided at the user's request. Source data
-  follows its own terms. No data mirror, GitHub repository, push or release has
-  been performed.
+  follows its own terms. Source binaries and generated products remain outside
+  Git; the repository destination is URC-kaist/map-pipeline.
 
-A locally verified development repository can be reviewed now. An openly licensed
-public release still requires the code-license decision, destination confirmation,
-a published-checkout/hosted CI check, and normal release tagging. Field registration
+The repository is being published as URC-kaist/map-pipeline, superseding
+URC-kaist/lidar. The latter is retained as a development archive. An openly
+licensed public release would still require a code-license decision. Field registration
 and runtime Nav2 cropper integration remain explicit limitations rather than
 claims of completion. Existing LiDAR numerical algorithms were not changed.
 
@@ -30,5 +30,5 @@ hashes. Tile serving and geographic checks passed without Node/MapLibre.
 See [direct-download checks](docs/download-verification.json) and
 [real RGB verification](docs/fresh-rgb-verification.json).
 
-The local repository is prepared for review. There is no configured remote and
-no published release; the code-license decision remains intentionally deferred.
+The code-license decision remains intentionally deferred. Repository publication
+does not select a code license or create a versioned GitHub Release.
