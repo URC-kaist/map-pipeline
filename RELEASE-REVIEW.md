@@ -18,3 +18,17 @@ public release still requires the code-license decision, destination confirmatio
 a published-checkout/hosted CI check, and normal release tagging. Field registration
 and runtime Nav2 cropper integration remain explicit limitations rather than
 claims of completion. Existing LiDAR numerical algorithms were not changed.
+
+## Completed fresh-checkout verification
+
+[Results](docs/fresh-checkout-verification.json): the source-only Git clone passed
+7 LiDAR tests (1 optional legacy comparison skipped) and the RGB integration
+check. Using independently downloaded ZIPs, it rebuilt the stitched mosaic,
+the full 80-million-cell terrain output, and 1,983 RGB tiles without viewer
+assets. All terrain products and every RGB PNG match their earlier baseline
+hashes. Tile serving and geographic checks passed without Node/MapLibre.
+See [direct-download checks](docs/download-verification.json) and
+[real RGB verification](docs/fresh-rgb-verification.json).
+
+The local repository is prepared for review. There is no configured remote and
+no published release; the code-license decision remains intentionally deferred.
