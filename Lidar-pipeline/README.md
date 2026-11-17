@@ -3,7 +3,7 @@
 ## Annotated slope review copy
 
 To mark MDRS at the supplied Google Maps coordinates **38.4053, -110.7900**
-and add a geographic **N/E/S/W** compass:
+and add a geographic **N/E/S/W** compass plus the **URC 2027 rule 1.e.xiii area**:
 
 ```bash
 /usr/bin/python3 Lidar-pipeline/annotate_slope.py Lidar-pipeline/output/mdrs-expanded
@@ -15,6 +15,15 @@ preserving the source image and its dimensions. The sidecar records coordinate
 conversion, source hashes and the marker's pixel location. The compass uses
 geographic cardinal tangents at MDRS, transformed into image coordinates; it
 does not assume UTM grid north is identical to geographic north.
+
+The yellow outline follows the approximate rule-book opposite corners
+**38.411, -110.786** and **38.425, -110.768**. Its geographic edges are densified
+before projection, rather than drawn as an assumed axis-aligned pixel box.
+It is labeled as approximate, with NE/SW corners marked; it is not a surveyed
+state parcel boundary or the larger buffered map footprint. The JSON sidecar
+records the transformed outline and whether it fits inside the source image.
+Use `--no-rule-region` to omit it. For a map smaller than the rule area, the
+image clips the outline and the sidecar reports incomplete coverage.
 
 For a smaller preview, choose another output and `--max-size 1600`. Optional
 `--latitude` and `--longitude` select another marker location. Existing outputs,

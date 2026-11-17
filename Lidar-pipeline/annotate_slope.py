@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Draw MDRS and a geographic N/E/S/W compass on a separate slope-image copy."""
+"""Draw MDRS, the approximate URC rule area, and N/E/S/W on a slope-image copy."""
 import argparse
 import hashlib
 import json
@@ -9,6 +9,33 @@ import tempfile
 
 from osgeo import gdal,osr
 from PIL import Image,ImageDraw,ImageFont
+
+RULE_BOUNDS=(-110.786,38.411,-110.768,38.425)  # W,S,E,N; URC 2027 1.e.xiii
+
+
+def rule_outline(metadata,bounds=RULE_BOUNDS):
+    west,south,east,north=bounds
+    if not all(math.isfinite(v) for v in bounds) or not (-180<=west<east<=180 and -90<south<north<90):
+        raise ValueError('Invalid geographic rule-area bounds')
+    source=osr.SpatialReference();source.ImportFromEPSG(4326)
+    target=osr.SpatialReference();target.SetFromUserInput(metadata['projected_crs_wkt'])
+    for s in [source,target]:s.SetAxisMappingStrategy(osr.OAMS_TRADITIONAL_GIS_ORDER)
+    transform=osr.CoordinateTransformation(source,target)
+    inverse=gdal.InvGeoTransform(metadata['geotransform'])
+    if inverse is None:raise ValueError('Non-invertible pixel transform')
+    corners=[(west,north),(east,north),(east,south),(west,south),(west,north)]
+    pixels=[]
+    for a,b in zip(corners,corners[1:]):
+        for i in range(100):
+            lon=a[0]+(b[0]-a[0])*i/100;lat=a[1]+(b[1]-a[1])*i/100
+            x,y,_=transform.TransformPoint(lon,lat)
+            pixels.append(list(gdal.ApplyGeoTransform(inverse,x,y)))
+    pixels.append(pixels[0])
+    w,h=metadata['size'];xs=[p[0] for p in pixels];ys=[p[1] for p in pixels]
+    return {'source':'URC 2027 rule 1.e.xiii; approximate opposite corners, not a surveyed parcel boundary',
+            'bounds_wgs84':list(bounds),'pixel_outer_edge_coordinates':pixels,
+            'fully_inside_image':all(0<=x<w and 0<=y<h for x,y in pixels),
+            'intersects_image_bounds':max(xs)>=0 and min(xs)<w and max(ys)>=0 and min(ys)<h}
 
 
 def sha(path):
@@ -43,7 +70,7 @@ def locate(metadata,latitude,longitude):
             'pixel_outer_edge_coordinates':[col,row],'direction_unit_vectors':directions}
 
 
-def annotate(result,output=None,latitude=38.4053,longitude=-110.7900,max_size=None):
+def annotate(result,output=None,latitude=38.4053,longitude=-110.7900,max_size=None,include_rule=True):
     result=Path(result).resolve();source=result/'slope.png'
     output=Path(output).resolve() if output else result/'slope_annotated.png'
     sidecar=output.with_suffix('.json')
@@ -54,6 +81,7 @@ def annotate(result,output=None,latitude=38.4053,longitude=-110.7900,max_size=No
     if max_size is not None and max_size<256:raise ValueError('max-size must be at least 256 pixels')
     metadata=json.loads((result/'metadata.json').read_text())
     position=locate(metadata,latitude,longitude)
+    region=rule_outline(metadata) if include_rule else None
     # The slope image is large but expected (~88 MP). Do not disable Pillow's
     # decompression checks globally; reject images inconsistent with metadata.
     with Image.open(source) as original:
@@ -73,6 +101,17 @@ def annotate(result,output=None,latitude=38.4053,longitude=-110.7900,max_size=No
         x=max(pad,min(x,w-tw-2*pad));y=max(pad,min(y,h-th-2*pad))
         draw.rectangle((x-pad,y-pad,x+tw+pad,y+th+2*pad),fill=(15,20,28,230))
         draw.multiline_text((x,y),text,font=font,fill='white',spacing=round(4*unit))
+    if region and region['intersects_image_bounds']:
+        points=[(x*sx-.5,y*sy-.5) for x,y in region['pixel_outer_edge_coordinates']]
+        # Outline only: retain the visible terrain inside the approximate area.
+        draw.line(points,fill='black',width=max(4,round(6*unit)),joint='curve')
+        draw.line(points,fill='#ffd84d',width=max(2,round(3*unit)),joint='curve')
+        text_box(min(p[0] for p in points),min(p[1] for p in points)-62*unit,
+                 'URC 2027 rule 1.e.xiii\nApproximate rule-book area')
+        for label,index in [('NE',100),('SW',300)]:
+            x,y=points[index]
+            draw.text((x+7*unit,y+7*unit),label,font=font,fill='#ffd84d',
+                      stroke_width=max(1,round(unit)),stroke_fill='black')
     radius=round(8*unit);px,py=point
     draw.ellipse((px-radius,py-radius,px+radius,py+radius),fill='#ff394f',outline='white',width=max(1,round(2*unit)))
     arm=round(17*unit)
@@ -96,6 +135,7 @@ def annotate(result,output=None,latitude=38.4053,longitude=-110.7900,max_size=No
     record={'source':str(source),'source_sha256':sha(source),
             'metadata_sha256':sha(result/'metadata.json'),'source_size':list(original_size),
             'output_size':list(image.size),'marker':position,'marker_output_pixel':point,
+            'rule_region':region,
             'coordinate_input':'WGS84 longitude/latitude supplied by user (Google Maps)',
             'compass':'geographic cardinal tangents at the marker; includes projection convergence',
             'limits':'Approximate datum operation and supplied coordinate precision; not a surveyed position. Annotation is visual only.'}
@@ -116,6 +156,7 @@ if __name__=='__main__':
     p.add_argument('--latitude',type=float,default=38.4053)
     p.add_argument('--longitude',type=float,default=-110.7900)
     p.add_argument('--max-size',type=int,help='Optional review thumbnail; default preserves source dimensions')
+    p.add_argument('--no-rule-region',action='store_true',help='Omit the approximate URC 2027 rule-area outline')
     a=p.parse_args()
-    try:annotate(a.result,a.output,a.latitude,a.longitude,a.max_size)
+    try:annotate(a.result,a.output,a.latitude,a.longitude,a.max_size,not a.no_rule_region)
     except (ValueError,RuntimeError) as e:p.exit(1,f'Annotation failed: {e}\n')
