@@ -13,6 +13,9 @@ LiDAR processing experiments. Use this repository for current procedures.
 The current profile covers **4 × 5.5 km**, including the requested operating
 rectangle and a 500 m northern extension. See [expanded coverage](docs/EXPANDED-COVERAGE.md)
 for source priorities, mixed resolution, limitations and validation.
+The operating coordinates are specified in **URC 2027 rule 1.e.xiii**; the
+coverage document includes the supplied rule excerpt and distinguishes the
+approximate competition area from our additional margin.
 
 ## Quickstart
 

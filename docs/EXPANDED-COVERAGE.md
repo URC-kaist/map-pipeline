@@ -7,6 +7,29 @@ It includes the rectangle whose opposite corners are **38.411, -110.786** and
 **38.425, -110.768**, with about 500 m of northward margin at the latter corner.
 This supersedes the original 2018-only 4 × 5 km profile and its NoData statistics.
 
+## Rule provenance: URC 2027, clause 1.e.xiii
+
+The operating coordinates come from the **official URC 2027 rules**, clause
+**1.e.xiii**. The team supplied the following excerpt:
+
+> 1.e.xiii. Locations will be in the Utah state-owned square mile between approximately (38.411N, -110.786E) and (38.425N, -110.768E). Teams are encouraged to use satellite imagery and maps including Digital Elevation Maps (DEM) of the area. URC will attempt to provide teams with a 1m or less resolution DEM of the area.
+
+Our geographic AOI uses these approximate opposite corners as the planning and
+coverage-test rectangle. The computed ~0.94 square miles reflects the rounded
+coordinates; the rule describes the site as a state-owned square mile. This
+rectangle is not a surveyed parcel boundary. The 500 m northern extension is
+our chosen coverage margin, not an additional rule requirement.
+
+The workflow supplies independently acquired 0.5 m and 1 m source DEMs and
+satellite/aerial basemap imagery, without relying on the DEM that URC says it
+will attempt to provide. A 0.5 m output grid does not upgrade 1 m source detail.
+
+The missing-data report is tracked in
+[issue #1](https://github.com/URC-kaist/map-pipeline/issues/1); the expanded
+pipeline and its coverage checks resolve it through
+[PR #2](https://github.com/URC-kaist/map-pipeline/pull/2), which declares
+`Fixes #1` and will close the issue when merged.
+
 ## Inputs and deterministic priorities
 
 Twenty checksum-pinned ZIPs in `sources.json` supply:
