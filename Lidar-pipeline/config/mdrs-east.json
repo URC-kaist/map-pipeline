@@ -1,13 +1,18 @@
 {
-  "input": "../../Lidar/bare_earth_2018_0p5m.tif",
-  "source_vertical_datum": "unknown; downloaded TIFF specifies metres but no vertical CRS",
+  "input": "../../Lidar/bare_earth_expanded_0p5m.tif",
+  "source_vertical_datum": "Provider heights retained; mixed 2018/2020 and 2022 (NAVD88 Geoid18); no vertical conversion; see mosaic diagnostics",
   "target_crs": "EPSG:6341",
   "anchor": {
     "crs": "EPSG:6318",
     "longitude": -110.793850513327,
     "latitude": 38.4025461391511
   },
-  "bounds": [518000, 4248000, 522000, 4253000],
+  "bounds": [
+    518000,
+    4248000,
+    522000,
+    4253500
+  ],
   "resolution_m": 0.5,
   "resampling": "bilinear",
   "full_cost_slope_deg": 45.0

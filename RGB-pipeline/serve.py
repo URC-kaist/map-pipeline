@@ -21,7 +21,7 @@ def create_server(root, bind='127.0.0.1', port=8088):
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--root', type=Path, default=Path(__file__).parent/'output/mdrs-crop/site')
+    p.add_argument('--root', type=Path, default=Path(__file__).parent/'output/mdrs-expanded/site')
     p.add_argument('--bind', default='127.0.0.1')
     p.add_argument('--port', type=int, default=8088)
     a = p.parse_args()

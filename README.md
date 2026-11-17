@@ -10,6 +10,10 @@ This project supersedes [URC-kaist/lidar](https://github.com/URC-kaist/lidar).
 That repository is retained as a read-only development archive for the original
 LiDAR processing experiments. Use this repository for current procedures.
 
+The current profile covers **4 × 5.5 km**, including the requested operating
+rectangle and a 500 m northern extension. See [expanded coverage](docs/EXPANDED-COVERAGE.md)
+for source priorities, mixed resolution, limitations and validation.
+
 ## Quickstart
 
 Install the [supported environment](ENVIRONMENT.md), then run from this root:
@@ -18,7 +22,7 @@ Install the [supported environment](ENVIRONMENT.md), then run from this root:
 /usr/bin/python3 download_sources.py
 /usr/bin/python3 prepare_sources.py
 /usr/bin/python3 mosaic_dem.py
-/usr/bin/python3 Lidar-pipeline/pipeline.py --output Lidar-pipeline/output/mdrs-east
+/usr/bin/python3 Lidar-pipeline/pipeline.py --output Lidar-pipeline/output/mdrs-expanded
 /usr/bin/python3 RGB-pipeline/generate.py
 /usr/bin/python3 RGB-pipeline/serve.py
 ```
@@ -38,7 +42,7 @@ generate tiles, produce metadata, or serve these files.**
 Prepare any MapLibre GL JS package separately, then add its local assets:
 
 ```bash
-/usr/bin/python3 RGB-pipeline/build_viewer.py RGB-pipeline/output/mdrs-crop --assets /path/to/maplibre-gl-package
+/usr/bin/python3 RGB-pipeline/build_viewer.py RGB-pipeline/output/mdrs-expanded --assets /path/to/maplibre-gl-package
 ```
 
 This package must include `dist/maplibre-gl.js`, `dist/maplibre-gl.css`,

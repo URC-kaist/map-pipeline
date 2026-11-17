@@ -1,9 +1,9 @@
 {
   "overview": {
-    "zoom": 13.216607057495233,
+    "zoom": 13.079318960701832,
     "center": {
-      "lng": -110.77093805142687,
-      "lat": 38.40250489600507
+      "lng": -110.77093022057073,
+      "lat": 38.40475868108484
     }
   },
   "zoomChecks": [
@@ -57,7 +57,7 @@
     17,
     18
   ],
-  "tileRequests": 103,
+  "tileRequests": 106,
   "externalRequests": [],
   "httpFailures": [],
   "exceptions": [],

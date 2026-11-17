@@ -1,0 +1,197 @@
+{
+  "result": "passed",
+  "tile_counts": {
+    "14": 12,
+    "15": 35,
+    "16": 117,
+    "17": 408,
+    "18": 1598
+  },
+  "tiles_with_transparency": 306,
+  "controls": [
+    {
+      "dem_utm": [
+        518250,
+        4248500
+      ],
+      "longitude_latitude": [
+        -110.79103922522002,
+        38.38451659987299
+      ],
+      "mercator": [
+        -12333202.07100909,
+        4633888.4279092895
+      ],
+      "xyz": [
+        18,
+        50396,
+        100760
+      ],
+      "pixel": [
+        109,
+        50
+      ],
+      "crop_rgba": [
+        206,
+        179,
+        158,
+        255
+      ],
+      "tile_rgba": [
+        206,
+        179,
+        158,
+        255
+      ],
+      "maximum_channel_difference": 0
+    },
+    {
+      "dem_utm": [
+        519000,
+        4250500
+      ],
+      "longitude_latitude": [
+        -110.78239783850682,
+        38.40252543718079
+      ],
+      "mercator": [
+        -12332240.11624043,
+        4636446.258336258
+      ],
+      "xyz": [
+        18,
+        50402,
+        100743
+      ],
+      "pixel": [
+        184,
+        118
+      ],
+      "crop_rgba": [
+        223,
+        206,
+        191,
+        255
+      ],
+      "tile_rgba": [
+        223,
+        206,
+        191,
+        255
+      ],
+      "maximum_channel_difference": 0
+    },
+    {
+      "dem_utm": [
+        520000,
+        4251500
+      ],
+      "longitude_latitude": [
+        -110.77091672844362,
+        38.41151581766479
+      ],
+      "mercator": [
+        -12330962.044914452,
+        4637723.418154403
+      ],
+      "xyz": [
+        18,
+        50411,
+        100735
+      ],
+      "pixel": [
+        20,
+        28
+      ],
+      "crop_rgba": [
+        222,
+        210,
+        186,
+        255
+      ],
+      "tile_rgba": [
+        222,
+        210,
+        186,
+        255
+      ],
+      "maximum_channel_difference": 0
+    },
+    {
+      "dem_utm": [
+        521000,
+        4252500
+      ],
+      "longitude_latitude": [
+        -110.75943277309513,
+        38.42050505050308
+      ],
+      "mercator": [
+        -12329683.656852765,
+        4639000.573820953
+      ],
+      "xyz": [
+        18,
+        50419,
+        100726
+      ],
+      "pixel": [
+        113,
+        193
+      ],
+      "crop_rgba": [
+        230,
+        206,
+        172,
+        255
+      ],
+      "tile_rgba": [
+        230,
+        206,
+        172,
+        255
+      ],
+      "maximum_channel_difference": 0
+    }
+  ],
+  "roundtrip_max_m": 1.2375118458567478e-09,
+  "http": [
+    {
+      "route": "/tiles/naip/tilejson.json",
+      "status": 200,
+      "bytes": 366
+    },
+    {
+      "route": "/crop-outline.geojson",
+      "status": 200,
+      "bytes": 16950
+    },
+    {
+      "route": "/tiles/naip/18/50417/100753.png",
+      "status": 200,
+      "bytes": 70740
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "bytes": 2144
+    },
+    {
+      "route": "/vendor/maplibre-gl.js",
+      "status": 200,
+      "bytes": 803086
+    },
+    {
+      "route": "/vendor/maplibre-gl.css",
+      "status": 200,
+      "bytes": 65534
+    }
+  ],
+  "operations": {
+    "26912->3857": "Candidate operations found: 1\nNote: using '--spatial-test intersects' would bring more results (10)\nunknown id, Inverse of UTM zone 12N + NAD83 to WGS 84 (1) + Popular Visualisation Pseudo-Mercator, 4 m, North America - onshore and offshore: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. United States (USA) - Alabama; Alaska (mainland); Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming.\n",
+    "6341->26912": "Candidate operations found: 1\nunknown id, Inverse of UTM zone 12N + Ballpark geographic offset from NAD83(2011) to NAD83 + UTM zone 12N, unknown accuracy, World, has ballpark transformation\n",
+    "6341->3857": "Candidate operations found: 1\nunknown id, Inverse of UTM zone 12N + NAD83(2011) to WGS 84 (1) + Popular Visualisation Pseudo-Mercator, 2 m, Puerto Rico - onshore and offshore. United States (USA) onshore and offshore - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands - onshore and offshore.\n"
+  },
+  "former_eastern_gap_alpha": 255,
+  "limits": "Numerical/HTTP verification, not surveyed alignment or live Nav2 /toLL validation. Browser verification is recorded separately in evidence/browser.json."
+}

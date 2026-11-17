@@ -1,5 +1,9 @@
 # Reproducible terrain and navigation maps
 
+**Current expanded profile (2026-11-17):** see the root
+[expanded coverage record](../docs/EXPANDED-COVERAGE.md). It supersedes the original dimensions/source counts below; those describe
+the initial 2018-only validation. Current commands use the expanded inputs.
+
 This is the working replacement for `~/lidar`'s terrain-generation procedure,
 within **URC-kaist/map-pipeline**. It accepts an elevation GeoTIFF or
 an explicitly configured ground-class point cloud, and generates terrain
@@ -23,7 +27,7 @@ Lidar-pipeline/
 ├── check_nav2.py           # Optional native Nav2 library roundtrip
 ├── check_nav2.cpp
 ├── config/
-│   ├── mdrs-east.json       # Full 4 × 5 km UTM region, 0.5 m cells
+│   ├── mdrs-east.json       # Expanded 4 × 5.5 km UTM region, 0.5 m cells
 │   └── legacy-aeqd.json     # Datum-centered 1 km AEQD example, 0.4 m cells
 ├── evidence/               # Audit and verification records
 └── output/                 # Rebuildable results, ignored by Git
@@ -53,11 +57,11 @@ From `map-pipeline-testing/`, first build the source mosaic if absent:
 Then, from this `Lidar-pipeline/` directory:
 
 ```bash
-/usr/bin/python3 pipeline.py --config config/mdrs-east.json --output output/mdrs-east
+/usr/bin/python3 pipeline.py --config config/mdrs-east.json --output output/mdrs-expanded
 ```
 
 The output directory must **not already exist**. To repeat a run, choose a new
-name, such as `output/mdrs-east-repeat`. Inputs are never overwritten. Results
+name, such as `output/mdrs-expanded-repeat`. Inputs are never overwritten. Results
 are built in a temporary sibling directory and appear at the requested path
 only after a successful run. An unsuccessful run removes its temporary products.
 
@@ -87,7 +91,7 @@ missing coverage is performed.
    `pipeline_source.py` in each new result.
 
 The default target is **NAD83(2011) / UTM zone 12N, EPSG:6341**. It retains the
-native source grid and rectangle E=518000–522000, N=4248000–4253000 m. Its test
+native source grid and rectangle E=518000–522000, N=4248000–4253500 m. Its test
 anchor is latitude 38.4025461391511, longitude -110.793850513327 in EPSG:6318,
 which projects to approximately E=518000, N=4250500 m.
 
@@ -198,7 +202,7 @@ closed watertight solid.
 
 ```bash
 /usr/bin/python3 verify.py
-/usr/bin/python3 check_nav2.py output/mdrs-east --report evidence/native-nav2.json
+/usr/bin/python3 check_nav2.py output/mdrs-expanded --report evidence/native-nav2.json
 ```
 
 - Eight tests pass: analytic plane derivatives/cost, invalid-parameter rejection,

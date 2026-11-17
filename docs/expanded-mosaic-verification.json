@@ -1,0 +1,199 @@
+{
+  "bounds": [
+    518000,
+    4248000,
+    522000,
+    4253500
+  ],
+  "size": [
+    8000,
+    11000
+  ],
+  "resolution_m": 0.5,
+  "crs": "EPSG:6341",
+  "priority": "2018 valid first, then 2020 holes, then 2022 holes",
+  "nodata_pixels": 0,
+  "sources": [
+    {
+      "id": 1,
+      "path": "Lidar/2018/12SWH1848.tif",
+      "sha256": "55aab838a1937269eca6b580f8cd8cef67aa89fa9bb5f68965f54ff2176c0bcf",
+      "native_resolution": 0.5,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 16000000,
+      "overlap_delta_median_m": null,
+      "overlap_abs_delta_p95_m": null
+    },
+    {
+      "id": 2,
+      "path": "Lidar/2018/12SWH1850.tif",
+      "sha256": "e6d0ebbed1232d1d95fd0984d5f3294eaa428662df79e4e44adcd675d2576377",
+      "native_resolution": 0.5,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 16000000,
+      "overlap_delta_median_m": null,
+      "overlap_abs_delta_p95_m": null
+    },
+    {
+      "id": 3,
+      "path": "Lidar/2018/12SWH1852.tif",
+      "sha256": "98440951b6dd04badc869036a6b918911201d6ee0d634ee1d4124b6b5ff33ebe",
+      "native_resolution": 0.5,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 1317602,
+      "overlap_delta_median_m": null,
+      "overlap_abs_delta_p95_m": null
+    },
+    {
+      "id": 4,
+      "path": "Lidar/2018/12SWH1952.tif",
+      "sha256": "dc0da603c7d3ea44e4966b0271c0c7c44bd07b041c52500bbc6f3ad2792ecb08",
+      "native_resolution": 0.5,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 1942477,
+      "overlap_delta_median_m": null,
+      "overlap_abs_delta_p95_m": null
+    },
+    {
+      "id": 5,
+      "path": "Lidar/2018/12SWH2048.tif",
+      "sha256": "312fb9cc0f1ff147676179a6c5706af9686dd6086fbd1c6cd77a746350df632f",
+      "native_resolution": 0.5,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 16000000,
+      "overlap_delta_median_m": null,
+      "overlap_abs_delta_p95_m": null
+    },
+    {
+      "id": 6,
+      "path": "Lidar/2018/12SWH2050.tif",
+      "sha256": "d749fd1e58ada241b9277a38d7c5bbd4d3859bedb3e87e6b1d598e1d74b5cd20",
+      "native_resolution": 0.5,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 16000000,
+      "overlap_delta_median_m": null,
+      "overlap_abs_delta_p95_m": null
+    },
+    {
+      "id": 7,
+      "path": "Lidar/2018/12SWH2052.tif",
+      "sha256": "f805d505d813a13709057ca8efedc2b4b5bb9a072db7bdd4b4c4197697c7ea78",
+      "native_resolution": 0.5,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 2567367,
+      "overlap_delta_median_m": null,
+      "overlap_abs_delta_p95_m": null
+    },
+    {
+      "id": 8,
+      "path": "Lidar/2018/12SWH2152.tif",
+      "sha256": "e98ba473b615fb6da848604637f30f7111608e177244119d5fc14549f1c39f63",
+      "native_resolution": 0.5,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 3192299,
+      "overlap_delta_median_m": null,
+      "overlap_abs_delta_p95_m": null
+    },
+    {
+      "id": 9,
+      "path": "Lidar/2020/12SWH1852.tif",
+      "sha256": "c06ac68f4df48e4b76c1373693e84634253e7774bf4bdf2f614dc7a9bebd2498",
+      "native_resolution": 1.0,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 2682398,
+      "overlap_delta_median_m": -0.0062255859375,
+      "overlap_abs_delta_p95_m": 0.064453125
+    },
+    {
+      "id": 10,
+      "path": "Lidar/2020/12SWH1853.tif",
+      "sha256": "eaddfde6739a56e685390c08644e06b0aab361da1f8b20bed5f4070251686639",
+      "native_resolution": 1.0,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 2000000,
+      "overlap_delta_median_m": null,
+      "overlap_abs_delta_p95_m": null
+    },
+    {
+      "id": 11,
+      "path": "Lidar/2020/12SWH1952.tif",
+      "sha256": "f321b1d0dbc1b92e02eedaa0f6d1ac8da3b1dc6cced0be6102ca914546dc4567",
+      "native_resolution": 1.0,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 2057523,
+      "overlap_delta_median_m": 0.015625,
+      "overlap_abs_delta_p95_m": 0.064208984375
+    },
+    {
+      "id": 12,
+      "path": "Lidar/2020/12SWH1953.tif",
+      "sha256": "b790bf1802c67e4dd8f5d060360b8da7cc7479620f1ff518cd6ac11a742c7ef1",
+      "native_resolution": 1.0,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 2000000,
+      "overlap_delta_median_m": null,
+      "overlap_abs_delta_p95_m": null
+    },
+    {
+      "id": 13,
+      "path": "Lidar/2020/12SWH2052.tif",
+      "sha256": "3b20157df0557d8dde0ea9d5af5418fa19105449e1970e56fb88b6f08822ed1f",
+      "native_resolution": 1.0,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 1421754,
+      "overlap_delta_median_m": 0.025634765625,
+      "overlap_abs_delta_p95_m": 0.0709228515625
+    },
+    {
+      "id": 14,
+      "path": "Lidar/2020/12SWH2053.tif",
+      "sha256": "1bef87027c8362ea6dfde58d444899a19ccdf98c0d47f3ee5e147128f1e274af",
+      "native_resolution": 1.0,
+      "crs_wkt": "PROJCS[\"NAD_1983_2011_UTM_Zone_12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+      "used_pixels": 1976940,
+      "overlap_delta_median_m": null,
+      "overlap_abs_delta_p95_m": null
+    },
+    {
+      "id": 15,
+      "path": "Lidar/2022/12SWH2052.tif",
+      "sha256": "c03c644b87ffd7bb5722fd059f4f054b868e1cc9752084f97325529910ecaa90",
+      "native_resolution": 1.0,
+      "crs_wkt": "COMPD_CS[\"NAD83(2011) / UTM zone 12N + NAVD88 height - Geoid18 (Meters)\",PROJCS[\"NAD83(2011) / UTM zone 12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]],VERT_CS[\"NAVD88 height\",VERT_DATUM[\"North American Vertical Datum 1988\",2005,AUTHORITY[\"EPSG\",\"5103\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Gravity-related height\",UP],AUTHORITY[\"EPSG\",\"5703\"]]]",
+      "used_pixels": 10879,
+      "overlap_delta_median_m": 0.0316162109375,
+      "overlap_abs_delta_p95_m": 0.0806884765625
+    },
+    {
+      "id": 16,
+      "path": "Lidar/2022/12SWH2053.tif",
+      "sha256": "aca65c88c54b5c45a2ca593d5d24d22e5c858c293be4b693885bad21e8536b83",
+      "native_resolution": 1.0,
+      "crs_wkt": "COMPD_CS[\"NAD83(2011) / UTM zone 12N + NAVD88 height - Geoid18 (Meters)\",PROJCS[\"NAD83(2011) / UTM zone 12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]],VERT_CS[\"NAVD88 height\",VERT_DATUM[\"North American Vertical Datum 1988\",2005,AUTHORITY[\"EPSG\",\"5103\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Gravity-related height\",UP],AUTHORITY[\"EPSG\",\"5703\"]]]",
+      "used_pixels": 23060,
+      "overlap_delta_median_m": 0.025390625,
+      "overlap_abs_delta_p95_m": 0.106689453125
+    },
+    {
+      "id": 17,
+      "path": "Lidar/2022/12SWH2152.tif",
+      "sha256": "32a06202835e4f833932b71a9e907200ab53ce201af90c778b13e4c94f8781e6",
+      "native_resolution": 1.0,
+      "crs_wkt": "COMPD_CS[\"NAD83(2011) / UTM zone 12N + NAVD88 height - Geoid18 (Meters)\",PROJCS[\"NAD83(2011) / UTM zone 12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]],VERT_CS[\"NAVD88 height\",VERT_DATUM[\"North American Vertical Datum 1988\",2005,AUTHORITY[\"EPSG\",\"5103\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Gravity-related height\",UP],AUTHORITY[\"EPSG\",\"5703\"]]]",
+      "used_pixels": 807701,
+      "overlap_delta_median_m": 0.0445556640625,
+      "overlap_abs_delta_p95_m": 0.1004638671875
+    },
+    {
+      "id": 18,
+      "path": "Lidar/2022/12SWH2153.tif",
+      "sha256": "cb3c202234079f64e1816fee89d4ff958f8c11885e941a4e5257aba87938f552",
+      "native_resolution": 1.0,
+      "crs_wkt": "COMPD_CS[\"NAD83(2011) / UTM zone 12N + NAVD88 height - Geoid18 (Meters)\",PROJCS[\"NAD83(2011) / UTM zone 12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]],VERT_CS[\"NAVD88 height\",VERT_DATUM[\"North American Vertical Datum 1988\",2005,AUTHORITY[\"EPSG\",\"5103\"]],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Gravity-related height\",UP],AUTHORITY[\"EPSG\",\"5703\"]]]",
+      "used_pixels": 2000000,
+      "overlap_delta_median_m": null,
+      "overlap_abs_delta_p95_m": null
+    }
+  ],
+  "vertical_datum": "Provider heights retained; 2018/2020 vertical metadata unestablished, 2022 advertises NAVD88 Geoid18. No vertical correction; overlap statistics are diagnostic, not datum proof."
+}

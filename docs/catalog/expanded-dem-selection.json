@@ -1,0 +1,200 @@
+[
+  {
+    "OBJECTID": 177484,
+    "TILE": "12SWH2052",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2020/QL2/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 3,
+    "TILE_INDEX": "LiDAR2020_100cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 741759.15234375,
+    "Shape__Length": 3681.6673758423285,
+    "intersection_m2": 454229.4543998651
+  },
+  {
+    "OBJECTID": 33202,
+    "TILE": "12SWH1952",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2018/QL1/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 65,
+    "TILE_INDEX": "LiDAR2018_50cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 1632927.03515625,
+    "Shape__Length": 5111.452231275609,
+    "intersection_m2": 999999.9999969602
+  },
+  {
+    "OBJECTID": 33179,
+    "TILE": "12SWH2048",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2018/QL1/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 65,
+    "TILE_INDEX": "LiDAR2018_50cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 6526040.65625,
+    "Shape__Length": 10218.468426948,
+    "intersection_m2": 4000000.0000000596
+  },
+  {
+    "OBJECTID": 188502,
+    "TILE": "12SWH1852",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2020/QL2/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 3,
+    "TILE_INDEX": "LiDAR2020_100cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 1260332.40234375,
+    "Shape__Length": 4542.705938337415,
+    "intersection_m2": 771808.237857148
+  },
+  {
+    "OBJECTID": 33203,
+    "TILE": "12SWH2052",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2018/QL1/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 65,
+    "TILE_INDEX": "LiDAR2018_50cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 1632924.421875,
+    "Shape__Length": 5111.448141128577,
+    "intersection_m2": 1000000.0000025034
+  },
+  {
+    "OBJECTID": 243862,
+    "TILE": "12SWH2052",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/west-east-utah-2022/QL2/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 4,
+    "TILE_INDEX": "LiDAR2022_100cm_WestEastUtah_DEM_Tiles",
+    "Shape__Area": 98304.73828125,
+    "Shape__Length": 1594.1042376655894,
+    "intersection_m2": 60198.119787902106
+  },
+  {
+    "OBJECTID": 251908,
+    "TILE": "12SWH2152",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/west-east-utah-2022/QL2/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 4,
+    "TILE_INDEX": "LiDAR2022_100cm_WestEastUtah_DEM_Tiles",
+    "Shape__Area": 649825.6328125,
+    "Shape__Length": 3585.1993087637247,
+    "intersection_m2": 397922.63414473087
+  },
+  {
+    "OBJECTID": 33169,
+    "TILE": "12SWH1850",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2018/QL1/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 65,
+    "TILE_INDEX": "LiDAR2018_50cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 6529289.65234375,
+    "Shape__Length": 10221.011725246046,
+    "intersection_m2": 3999999.9995970726
+  },
+  {
+    "OBJECTID": 179028,
+    "TILE": "12SWH1853",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2020/QL2/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 3,
+    "TILE_INDEX": "LiDAR2020_100cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 1633333.71875,
+    "Shape__Length": 5112.088705632218,
+    "intersection_m2": 499999.9997397065
+  },
+  {
+    "OBJECTID": 180273,
+    "TILE": "12SWH2053",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2020/QL2/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 3,
+    "TILE_INDEX": "LiDAR2020_100cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 1612639.75390625,
+    "Shape__Length": 5079.784008499988,
+    "intersection_m2": 494238.149842605
+  },
+  {
+    "OBJECTID": 33204,
+    "TILE": "12SWH2152",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2018/QL1/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 65,
+    "TILE_INDEX": "LiDAR2018_50cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 1632921.68359375,
+    "Shape__Length": 5111.443846462363,
+    "intersection_m2": 1000000.000000447
+  },
+  {
+    "OBJECTID": 182650,
+    "TILE": "12SWH1952",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2020/QL2/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 3,
+    "TILE_INDEX": "LiDAR2020_100cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 1005248.0859375,
+    "Shape__Length": 4142.662513097803,
+    "intersection_m2": 615588.9516339358
+  },
+  {
+    "OBJECTID": 33178,
+    "TILE": "12SWH1848",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2018/QL1/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 65,
+    "TILE_INDEX": "LiDAR2018_50cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 6526061.52734375,
+    "Shape__Length": 10218.48476637326,
+    "intersection_m2": 3999999.9995970726
+  },
+  {
+    "OBJECTID": 33201,
+    "TILE": "12SWH1852",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2018/QL1/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 65,
+    "TILE_INDEX": "LiDAR2018_50cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 1632929.515625,
+    "Shape__Length": 5111.456116920185,
+    "intersection_m2": 999999.9998000264
+  },
+  {
+    "OBJECTID": 243271,
+    "TILE": "12SWH2153",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/west-east-utah-2022/QL2/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 4,
+    "TILE_INDEX": "LiDAR2022_100cm_WestEastUtah_DEM_Tiles",
+    "Shape__Area": 1633325.88671875,
+    "Shape__Length": 5112.076434167728,
+    "intersection_m2": 499993.74994790554
+  },
+  {
+    "OBJECTID": 252076,
+    "TILE": "12SWH2053",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/west-east-utah-2022/QL2/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 4,
+    "TILE_INDEX": "LiDAR2022_100cm_WestEastUtah_DEM_Tiles",
+    "Shape__Area": 183956.96484375,
+    "Shape__Length": 2848.6127614519273,
+    "intersection_m2": 55741.36474367976
+  },
+  {
+    "OBJECTID": 33170,
+    "TILE": "12SWH2050",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2018/QL1/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 65,
+    "TILE_INDEX": "LiDAR2018_50cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 6529268.765625,
+    "Shape__Length": 10220.995373719295,
+    "intersection_m2": 4000000.0000010133
+  },
+  {
+    "OBJECTID": 177752,
+    "TILE": "12SWH1953",
+    "PATH": "https://storage.googleapis.com/state-of-utah-sgid-downloads/lidar/southern-utah-2020/QL2/DEMs/",
+    "EXT": ".zip",
+    "SIZE": 3,
+    "TILE_INDEX": "LiDAR2020_100cm_SouthernUtah_DEM_Tiles",
+    "Shape__Area": 1633331.23828125,
+    "Shape__Length": 5112.084818557189,
+    "intersection_m2": 499999.99983878434
+  }
+]
