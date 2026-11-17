@@ -18,6 +18,20 @@ from serve import create_server
 
 
 class RgbChecks(unittest.TestCase):
+    def test_adjacent_rgb_sources_fill_east(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);s=osr.SpatialReference();s.ImportFromEPSG(26912)
+            for name,x,width,bands,value in [('west',519000,32,3,40),('east',519019.2,32,3,160),('dem',519000,64,1,1)]:
+                d=gdal.GetDriverByName('GTiff').Create(str(root/(name+'.tif')),width,32,bands,gdal.GDT_Byte)
+                d.SetProjection(s.ExportToWkt());d.SetGeoTransform((x,.6,0,4251000,0,-.6))
+                for i in range(1,bands+1):d.GetRasterBand(i).WriteArray(np.full((32,width),value,dtype=np.uint8))
+                d=None
+            c={'input':['west.tif','east.tif'],'crop_dem':'dem.tif','minzoom':18,'maxzoom':18,'display_maxzoom':22,'processes':1}
+            (root/'c.json').write_text(json.dumps(c));out=root/'out';build(root/'c.json',out)
+            d=gdal.Open(str(out/'work/cropped-3857.tif'));pixels=d.ReadAsArray()
+            valid=pixels[3]>0
+            self.assertTrue(np.any(pixels[0][valid]==40));self.assertTrue(np.any(pixels[0][valid]==160))
+
     def test_generation_without_node_or_viewer(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)

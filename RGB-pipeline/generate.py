@@ -35,12 +35,13 @@ def build(config_path, output):
     start=time.monotonic()
     config_path=Path(config_path).resolve();output=Path(output).resolve()
     c=json.loads(config_path.read_text())
-    image=(config_path.parent/c['input']).resolve()
+    inputs=c['input'] if isinstance(c['input'],list) else [c['input']]
+    images=[(config_path.parent/p).resolve() for p in inputs]
     dem_path=(config_path.parent/c['crop_dem']).resolve()
     if output.exists():raise ValueError('Choose a new output directory')
     if not 0<=c['minzoom']<=c['maxzoom']<=c['display_maxzoom']<=22:raise ValueError('Invalid zooms')
     if not 1<=c['processes']<=32:raise ValueError('Invalid worker count')
-    rgb=gdal.Open(str(image));dem=gdal.Open(str(dem_path))
+    rgb=gdal.BuildVRT('',[str(p) for p in images],resolution='highest');dem=gdal.Open(str(dem_path))
     if rgb.RasterCount!=3 or any(rgb.GetRasterBand(i).DataType!=gdal.GDT_Byte for i in [1,2,3]):
         raise ValueError('Expected Byte RGB source')
     if rgb.GetSpatialRef() is None or dem.GetSpatialRef() is None:raise ValueError('Missing CRS')
@@ -88,7 +89,7 @@ def build(config_path, output):
         (site/'crop-outline.geojson').write_text(json.dumps(outline)+'\n')
         counts={str(z):len(list((tiles/str(z)).glob('*/*.png'))) for z in range(c['minzoom'],c['maxzoom']+1)}
         shutil.copyfile(__file__,result/'generate_source.py')
-        manifest={'config':c,'input_sha256':sha(image),'crop_dem_sha256':sha(dem_path),
+        manifest={'config':c,'input_sha256':[{'file':p.name,'sha256':sha(p)} for p in images],'crop_dem_sha256':sha(dem_path),
                   'source_crs':rgb.GetProjection(),'crop_crs':dem.GetProjection(),
                   'crop_outer_bounds':[x0,y0,x1,y1],'warped_crop':crop_info,
                   'bounds_wgs84':bounds,'gdal':gdal.VersionInfo('--version'),
@@ -106,5 +107,5 @@ def build(config_path, output):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--config',type=Path,default=Path(__file__).parent/'config/naip.json')
-    p.add_argument('--output',type=Path,default=Path(__file__).parent/'output/mdrs-crop')
+    p.add_argument('--output',type=Path,default=Path(__file__).parent/'output/mdrs-expanded')
     a=p.parse_args();build(a.config,a.output)

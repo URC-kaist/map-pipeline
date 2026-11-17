@@ -53,10 +53,10 @@ def run(output,report):
                          'mercator':[x,y],'xyz':[z,tx,ty],'pixel':[ix,iy],
                          'crop_rgba':sample.tolist(),'tile_rgba':rgba.tolist(),
                          'maximum_channel_difference':delta})
-    # A point inside the requested DEM rectangle but outside the downloaded RGB.
+    # The expanded two-image mosaic must cover the former eastern imagery gap.
     x,y,_=osr.CoordinateTransformation(srs('EPSG:6341'),merc).TransformPoint(521950,4250500)
     col,row=gdal.ApplyGeoTransform(gdal.InvGeoTransform(gt),x,y)
-    assert crop.GetRasterBand(4).ReadAsArray(int(col),int(row),1,1)[0,0]==0
+    assert crop.GetRasterBand(4).ReadAsArray(int(col),int(row),1,1)[0,0]==255
     actual={};alpha_tiles=0
     for z in range(m['config']['minzoom'],m['config']['maxzoom']+1):
         files=list((tiles/str(z)).glob('*/*.png'));actual[str(z)]=len(files)
@@ -92,7 +92,7 @@ def run(output,report):
         ops[a+'->'+b]=subprocess.check_output(['projinfo','-s','EPSG:'+a,'-t','EPSG:'+b,'--summary'],text=True,stderr=subprocess.STDOUT)
     result={'result':'passed','tile_counts':actual,'tiles_with_transparency':alpha_tiles,
             'controls':controls,'roundtrip_max_m':worst,'http':http_checks,
-            'operations':ops,'eastern_uncovered_point_alpha':0,
+            'operations':ops,'former_eastern_gap_alpha':255,
             'limits':'Numerical/HTTP verification, not surveyed alignment or live Nav2 /toLL validation. Browser verification is recorded separately in evidence/browser.json.'}
     Path(report).write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({k:result[k] for k in ['result','tile_counts','roundtrip_max_m','tiles_with_transparency']},indent=2))

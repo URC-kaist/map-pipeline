@@ -1,5 +1,32 @@
 # Reproducible terrain and navigation maps
 
+## Annotated slope review copy
+
+To mark MDRS at the supplied Google Maps coordinates **38.4053, -110.7900**
+and add a geographic **N/E/S/W** compass:
+
+```bash
+/usr/bin/python3 Lidar-pipeline/annotate_slope.py Lidar-pipeline/output/mdrs-expanded
+```
+
+Run this command from the repository root. It writes
+`slope_annotated.png` and a JSON sidecar in the result directory,
+preserving the source image and its dimensions. The sidecar records coordinate
+conversion, source hashes and the marker's pixel location. The compass uses
+geographic cardinal tangents at MDRS, transformed into image coordinates; it
+does not assume UTM grid north is identical to geographic north.
+
+For a smaller preview, choose another output and `--max-size 1600`. Optional
+`--latitude` and `--longitude` select another marker location. Existing outputs,
+out-of-bounds locations, and image/metadata dimension mismatches are rejected.
+This utility uses GDAL and Pillow; no Internet or Google Maps API is needed.
+The annotated PNG is **a review image, not a navigation input**. Coordinate
+precision and datum-operation limitations remain; the marker is not surveyed.
+
+**Current expanded profile (2026-11-17):** see the root
+[expanded coverage record](../docs/EXPANDED-COVERAGE.md). It supersedes the original dimensions/source counts below; those describe
+the initial 2018-only validation. Current commands use the expanded inputs.
+
 This is the working replacement for `~/lidar`'s terrain-generation procedure,
 within **URC-kaist/map-pipeline**. It accepts an elevation GeoTIFF or
 an explicitly configured ground-class point cloud, and generates terrain
@@ -23,7 +50,7 @@ Lidar-pipeline/
 ├── check_nav2.py           # Optional native Nav2 library roundtrip
 ├── check_nav2.cpp
 ├── config/
-│   ├── mdrs-east.json       # Full 4 × 5 km UTM region, 0.5 m cells
+│   ├── mdrs-east.json       # Expanded 4 × 5.5 km UTM region, 0.5 m cells
 │   └── legacy-aeqd.json     # Datum-centered 1 km AEQD example, 0.4 m cells
 ├── evidence/               # Audit and verification records
 └── output/                 # Rebuildable results, ignored by Git
@@ -53,11 +80,11 @@ From `map-pipeline-testing/`, first build the source mosaic if absent:
 Then, from this `Lidar-pipeline/` directory:
 
 ```bash
-/usr/bin/python3 pipeline.py --config config/mdrs-east.json --output output/mdrs-east
+/usr/bin/python3 pipeline.py --config config/mdrs-east.json --output output/mdrs-expanded
 ```
 
 The output directory must **not already exist**. To repeat a run, choose a new
-name, such as `output/mdrs-east-repeat`. Inputs are never overwritten. Results
+name, such as `output/mdrs-expanded-repeat`. Inputs are never overwritten. Results
 are built in a temporary sibling directory and appear at the requested path
 only after a successful run. An unsuccessful run removes its temporary products.
 
@@ -87,7 +114,7 @@ missing coverage is performed.
    `pipeline_source.py` in each new result.
 
 The default target is **NAD83(2011) / UTM zone 12N, EPSG:6341**. It retains the
-native source grid and rectangle E=518000–522000, N=4248000–4253000 m. Its test
+native source grid and rectangle E=518000–522000, N=4248000–4253500 m. Its test
 anchor is latitude 38.4025461391511, longitude -110.793850513327 in EPSG:6318,
 which projects to approximately E=518000, N=4250500 m.
 
@@ -114,7 +141,7 @@ disabled during processing, so any required transformation grids must be local.
 | `validity.tif` | Byte 255 for valid slope/cost, 0 for unknown; georeferenced |
 | `heightmap_norm.png` | Elevation min/max → 0–255; transparent where DEM is unknown; constant elevation maps to 0 |
 | `slope_x_norm.png`, `slope_y_norm.png` | East/north signed derivative -1…1 → 0…255, clipped; transparent when invalid |
-| `slope_length_norm.png` | Rise/run 0…1 → 0…254, clipped; transparent when invalid |
+| `slope.png` | Rise/run 0…1 → 0…254, clipped; transparent when invalid |
 | `slope.png` | Angle 0…45° → 0…254, clipped; transparent when invalid |
 | `occupancy.png`, `map.yaml` | Matched Nav2 **raw-mode** cost image and loading configuration |
 | `metadata.json` | CRS WKT, anchor, local frame, lower-left origin, outer corners, units, counts and encoding |
@@ -198,7 +225,7 @@ closed watertight solid.
 
 ```bash
 /usr/bin/python3 verify.py
-/usr/bin/python3 check_nav2.py output/mdrs-east --report evidence/native-nav2.json
+/usr/bin/python3 check_nav2.py output/mdrs-expanded --report evidence/native-nav2.json
 ```
 
 - Eight tests pass: analytic plane derivatives/cost, invalid-parameter rejection,

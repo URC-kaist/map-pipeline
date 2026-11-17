@@ -1,5 +1,9 @@
 # Cropped offline RGB tile pipeline
 
+**Current expanded profile (2026-11-17):** see the root
+[expanded coverage record](../docs/EXPANDED-COVERAGE.md). It supersedes the original dimensions/source counts below; those describe
+the initial 2018-only validation. Current commands use the expanded inputs.
+
 Implemented and tested 2026-11-13. The original
 [research plan](research-plan.md) is retained as history; this file describes
 the actual current setup. No packages were installed and `~/mr2-stack` was not
@@ -18,7 +22,7 @@ Generation and serving require **no Node or MapLibre**. They produce and serve
 tile files independently. To add the optional graphical demo, run:
 
 ```bash
-/usr/bin/python3 build_viewer.py output/mdrs-crop --assets /path/to/maplibre-gl-package
+/usr/bin/python3 build_viewer.py output/mdrs-expanded --assets /path/to/maplibre-gl-package
 ```
 
 The package must contain `dist/maplibre-gl.js`, `dist/maplibre-gl.css`,
@@ -28,7 +32,7 @@ fail in this separate step without discarding generated tiles. Without this
 step, the server still serves `/tiles/naip/…`; `/` is a directory listing.
 
 Open **http://127.0.0.1:8088/** after adding the viewer. The generated result already exists at
-`output/mdrs-crop/`, so only the server command is needed to view it. The server
+`output/mdrs-expanded/`, so only the server command is needed to view it. The server
 runs until Ctrl-C. Use `--bind 0.0.0.0` explicitly if LAN access is wanted.
 
 For a new conversion, choose a fresh output directory:
@@ -75,7 +79,7 @@ RGB-pipeline/
 ├── browser_check.py, browser_check.mjs
 ├── evidence/
 ├── research-plan.md
-└── output/mdrs-crop/
+└── output/mdrs-expanded/
     ├── manifest.json, generation.log, generate_source.py
     ├── work/crop.gpkg, cropped-3857.tif
     └── site/
@@ -147,8 +151,8 @@ assets and filesystem overhead are additional. Counts by zoom:
 | 18 | 1,462 |
 
 ```bash
-/usr/bin/python3 verify.py output/mdrs-crop
-/usr/bin/python3 browser_check.py output/mdrs-crop
+/usr/bin/python3 verify.py output/mdrs-expanded
+/usr/bin/python3 browser_check.py output/mdrs-expanded
 ```
 
 `verify.py` checks every PNG, dimensions, manifest hashes, control-point pixel

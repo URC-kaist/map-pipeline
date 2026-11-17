@@ -1,0 +1,74 @@
+{
+  "aoi_wgs84": [
+    -110.786,
+    38.411,
+    -110.768,
+    38.425
+  ],
+  "map_region": {
+    "crs": "EPSG:6341",
+    "bounds": [
+      518000,
+      4248000,
+      522000,
+      4253500
+    ],
+    "resolution_m": 0.5,
+    "operating_aoi_wgs84": [
+      -110.786,
+      38.411,
+      -110.768,
+      38.425
+    ]
+  },
+  "checks": {
+    "dem": {
+      "cells_inside_aoi": 9763981,
+      "missing_cells": 0,
+      "corners": [
+        {
+          "latitude": 38.411,
+          "longitude": -110.786,
+          "value": 1379.81005859375
+        },
+        {
+          "latitude": 38.425,
+          "longitude": -110.768,
+          "value": 1423.2451171875
+        }
+      ]
+    },
+    "cost_validity": {
+      "cells_inside_aoi": 9763981,
+      "missing_cells": 0,
+      "corners": [
+        {
+          "latitude": 38.411,
+          "longitude": -110.786,
+          "value": 255.0
+        },
+        {
+          "latitude": 38.425,
+          "longitude": -110.768,
+          "value": 255.0
+        }
+      ]
+    },
+    "rgb_alpha": {
+      "cells_inside_aoi": 11175505,
+      "missing_cells": 0,
+      "corners": [
+        {
+          "latitude": 38.411,
+          "longitude": -110.786,
+          "value": 255.0
+        },
+        {
+          "latitude": 38.425,
+          "longitude": -110.768,
+          "value": 255.0
+        }
+      ]
+    }
+  }
+}
