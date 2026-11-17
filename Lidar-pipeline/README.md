@@ -1,5 +1,28 @@
 # Reproducible terrain and navigation maps
 
+## Annotated slope review copy
+
+To mark MDRS at the supplied Google Maps coordinates **38.4053, -110.7900**
+and add a geographic **N/E/S/W** compass:
+
+```bash
+/usr/bin/python3 Lidar-pipeline/annotate_slope.py Lidar-pipeline/output/mdrs-expanded
+```
+
+Run this command from the repository root. It writes
+`slope_annotated.png` and a JSON sidecar in the result directory,
+preserving the source image and its dimensions. The sidecar records coordinate
+conversion, source hashes and the marker's pixel location. The compass uses
+geographic cardinal tangents at MDRS, transformed into image coordinates; it
+does not assume UTM grid north is identical to geographic north.
+
+For a smaller preview, choose another output and `--max-size 1600`. Optional
+`--latitude` and `--longitude` select another marker location. Existing outputs,
+out-of-bounds locations, and image/metadata dimension mismatches are rejected.
+This utility uses GDAL and Pillow; no Internet or Google Maps API is needed.
+The annotated PNG is **a review image, not a navigation input**. Coordinate
+precision and datum-operation limitations remain; the marker is not surveyed.
+
 **Current expanded profile (2026-11-17):** see the root
 [expanded coverage record](../docs/EXPANDED-COVERAGE.md). It supersedes the original dimensions/source counts below; those describe
 the initial 2018-only validation. Current commands use the expanded inputs.
@@ -118,7 +141,7 @@ disabled during processing, so any required transformation grids must be local.
 | `validity.tif` | Byte 255 for valid slope/cost, 0 for unknown; georeferenced |
 | `heightmap_norm.png` | Elevation min/max → 0–255; transparent where DEM is unknown; constant elevation maps to 0 |
 | `slope_x_norm.png`, `slope_y_norm.png` | East/north signed derivative -1…1 → 0…255, clipped; transparent when invalid |
-| `slope_length_norm.png` | Rise/run 0…1 → 0…254, clipped; transparent when invalid |
+| `slope.png` | Rise/run 0…1 → 0…254, clipped; transparent when invalid |
 | `slope.png` | Angle 0…45° → 0…254, clipped; transparent when invalid |
 | `occupancy.png`, `map.yaml` | Matched Nav2 **raw-mode** cost image and loading configuration |
 | `metadata.json` | CRS WKT, anchor, local frame, lower-left origin, outer corners, units, counts and encoding |
