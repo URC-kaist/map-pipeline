@@ -1,0 +1,383 @@
+{
+  "profile": "mdrs-expanded",
+  "generation_code_revision": "becb193b8067719e2cfe73acfd0aa54e5ee8b028",
+  "preview_script_sha256": "efef16650cc3fa40955c743eb46caf1ce79d3c60112f4922d8ac23563308410a",
+  "region": {
+    "crs": "EPSG:6341",
+    "bounds": [
+      518000,
+      4248000,
+      522000,
+      4253500
+    ],
+    "resolution_m": 0.5,
+    "operating_aoi_wgs84": [
+      -110.786,
+      38.411,
+      -110.768,
+      38.425
+    ]
+  },
+  "sample_dimensions": [
+    320,
+    440
+  ],
+  "sampling": "Nearest cell-centre sampling of full-resolution products; not slope recomputation",
+  "nav2_preview": {
+    "source": "occupancy.png",
+    "valid_cost_range": [
+      0,
+      100
+    ],
+    "unknown": 255,
+    "representation": "Colour-mapped visualization, not a Nav2 input"
+  },
+  "elevation_colour_limits_m": [
+    1320,
+    1450
+  ],
+  "rgb_xyz_zoom": 16,
+  "terrain_manifest_sha256": "893aa8bc43a050c0287555d729ba1c020f2c9b0734ccbb3184b31d3d9e7b8bfd",
+  "terrain_config": {
+    "input": "../../Lidar/bare_earth_expanded_0p5m.tif",
+    "source_vertical_datum": "Provider heights retained; mixed 2018/2020 and 2022 (NAVD88 Geoid18); no vertical conversion; see mosaic diagnostics",
+    "target_crs": "EPSG:6341",
+    "anchor": {
+      "crs": "EPSG:6318",
+      "longitude": -110.793850513327,
+      "latitude": 38.4025461391511
+    },
+    "bounds": [
+      518000,
+      4248000,
+      522000,
+      4253500
+    ],
+    "resolution_m": 0.5,
+    "resampling": "bilinear",
+    "full_cost_slope_deg": 45.0
+  },
+  "terrain_generation_script_sha256": "ba03f1788d1e0301752339fb3fb1e6acbe84fc6bf701b6375560793b890af7a1",
+  "terrain_input_sha256": "d707bd94aaf8aa1a9a39d03fc451617aad089b0dd1785780c0b876669ba6a1da",
+  "terrain_output_sha256": {
+    "dem.tif": "8373f8cfd9a2c385cdd877d40a86607ff2b0b980c46e9cda3e99473852fa3948",
+    "occupancy.png": "5bb77c916a8fe64240766ccd542b04e189ae31f5c7f1c8c74951f0b7b2084ee8"
+  },
+  "rgb_manifest_sha256": "af431ff66fdbb854bbfb1ebbef89e627e4c36f189cab68ebc42509675037ff7d",
+  "rgb_generation_script_sha256": "ee17c7388b54443de9264979ededfb69c09f90f6bc4b9e3efc1265989154c224",
+  "rgb_config": {
+    "input": [
+      "../../RGB/q3128_se_NAIP2024_RGB.tif",
+      "../../RGB/q3129_sw_NAIP2024_RGB.tif"
+    ],
+    "crop_dem": "../../Lidar/bare_earth_expanded_0p5m.tif",
+    "minzoom": 14,
+    "maxzoom": 18,
+    "display_maxzoom": 22,
+    "processes": 4
+  },
+  "rgb_source_sha256": [
+    {
+      "file": "q3128_se_NAIP2024_RGB.tif",
+      "sha256": "90905b19cd2e0d746ba879086a140b5e962bbb45689ed15732d5c664a1a2224a"
+    },
+    {
+      "file": "q3129_sw_NAIP2024_RGB.tif",
+      "sha256": "92f0f209438fda3f1aa088b598d1aef6cfd3b9782448d5a88e718ff0502df304"
+    }
+  ],
+  "rgb_sampled_tile_sha256": {
+    "16/12598/25179.png": "53f2f823d9fd03818e797013371269b4df6ba1fffe31d4acf9a5e6a5492f1874",
+    "16/12598/25180.png": "10918ba57ca6beb041ee9183be9a53880e8e4e253d06e8f4efc190c6252716d0",
+    "16/12598/25181.png": "545db76b30c83a7aa596895a0ede2da7caeacef7f23932d5f29916d79a3f3670",
+    "16/12598/25182.png": "6df73dde3cfb8365f2eb531ad464b38d6d13e3590af30a309888a88bfdfad749",
+    "16/12598/25183.png": "381f0507d4efb152d16717f74313da8d633fe9a18152d7410a568742b23bb72f",
+    "16/12598/25184.png": "898e0fb3c756b821401e53e8bd12132a6e89d25d4b65160590b9e13b0f98e5d2",
+    "16/12598/25185.png": "1a12d8f06e79a1c2d70a76403a9b0265e7b9d7bba4c4b941a497875a80392b65",
+    "16/12598/25186.png": "09a28b3046b42057b5fc72a50d5dd6f5410a0ae1bc99ab3e28ce602abb656ccf",
+    "16/12598/25187.png": "fb7366509d8a03a29671ff663d0291a4d55600c8eaed487c352e7dbe4cdf7120",
+    "16/12598/25188.png": "2fbc5ac046df897184fa6c93ed6d18d2ef9cdb4ca9d3b8d0ba2468b78b42175b",
+    "16/12598/25189.png": "01ba2eb4074648f6befe4d0cedffe864f7a81289f910c0cbc0d8c23c9527043c",
+    "16/12598/25190.png": "b15ef519467e1d6e4f48bb27f28778a61bfab627c147c95c7fe15be88e9f05a3",
+    "16/12598/25191.png": "294b3674ad4e06d38dfecdf05ce9f4bfc86ac4fdd0c32569f14bebee7ed55900",
+    "16/12599/25179.png": "6b1df2fa46252eb5207b6047096a30f5c952c2859faf5b7527c74cf75bba3727",
+    "16/12599/25180.png": "b3cea227e20171a992163ef373333f1f4af3e89f6c00021638b03e23f5fd7b75",
+    "16/12599/25181.png": "830e3c666d70babb2f43eab1c743d4ee9b724170ff112c070e1baeff024eb921",
+    "16/12599/25182.png": "92e68f1084b82f0227777facd083749706962ac259ecbecf334577ae8a5e4b0a",
+    "16/12599/25183.png": "f09a46bbcc6c684ca400bb8a855a8e4b18d15c9038ddde65fb69d31fbc2f439f",
+    "16/12599/25184.png": "ec184fe62947463d9541e52890aa55fbc21f154e350172f78bfe99304cbc181e",
+    "16/12599/25185.png": "d4698deda92c66142a8e83526b089ceb23179d462b7caacd612f68a94b7e2d61",
+    "16/12599/25186.png": "146f658135cdc40ff49544c96c815963921da2f956ca2f60b14d2b3ccd4a292e",
+    "16/12599/25187.png": "9d742ad62c8db9e015cf432401f601f713b3136c5b3c87791606fb5229475951",
+    "16/12599/25188.png": "88c23514503d57e955a0e03084dd9ac3daee96964787b240fc8cc3d632d118e7",
+    "16/12599/25189.png": "7351adca26a83aff5ddeb531ad1e944c52b6e90bd375ee8fb15c786f87cc02c8",
+    "16/12599/25190.png": "fd121126fb2463aa095223c82aae6896fd06c92cddfe14b0600cbc1228f94e55",
+    "16/12599/25191.png": "469973bc100542fbb3029b140b767f4f10c2d830224cd8a76cdb5490a824e511",
+    "16/12600/25179.png": "13d990949e23da474960364e4dd8dfa54584010451a919c905cc58b36ebdd630",
+    "16/12600/25180.png": "5eafa713d9bc7061bb377bb9f6760f862e8ee1a09594b08fd86a8c75299de85a",
+    "16/12600/25181.png": "f71d45c5821d21605589379ce0aec9b2e647ae417543ee9d36f162f6f0e60e83",
+    "16/12600/25182.png": "82afa8f9882d4a7b5ffd7799b11320b3b76874f7e827f8fdc6f7454b79db4d1d",
+    "16/12600/25183.png": "490ffa73319236e9238e862d66fe6ec9c120e47769b8a0e5344bd5015e1f4a4e",
+    "16/12600/25184.png": "3dbafaa3e5943c9371af49b1ac0d5b5011ee459f9063bf3e04f92a5d71bcccd3",
+    "16/12600/25185.png": "2fe8d131da23904f220b85e2704637927feca79fbb2b8e57e6483c2f6aabb48e",
+    "16/12600/25186.png": "e1a7863b0a22a771010e97c4bf0d87975930c452ba791d22445f8cab1f1830c1",
+    "16/12600/25187.png": "900866e0ea0daee62598b27afdd6211afe55c2cb28fd8de3c51c0b7791ce9c25",
+    "16/12600/25188.png": "29c8fe38ab580be08c4ce33f73830b08dd5bc349ba23c4853cf55056a3419c68",
+    "16/12600/25189.png": "8f19690119b510e7c9abb6a3d4a3e52de55a21d644d0f0b171b4ecdd5a70a55b",
+    "16/12600/25190.png": "01a37c679ac85902a2efd27b46b18d32a9f04fb53a9045a148ba22607c3e1698",
+    "16/12600/25191.png": "7cb8102f1c84f63d3332caa48778da6def6ce9a4236777536f934d156b17bf8b",
+    "16/12601/25179.png": "0aa3aba5da9f97b0a6eee93f59977108eec20a01bab50ec4668b41ec12ef804a",
+    "16/12601/25180.png": "30d28f35fa115be1026eee6b45c9bffc15aebca61d7cf90f68c328ae2e688910",
+    "16/12601/25181.png": "1816cbf99e6dbba927d432c746c1da7755e61c5102ce67451c219c9fd6577cd4",
+    "16/12601/25182.png": "05bcc0e0bbd024f81ca9c479b4f94b54aacc7f7c0e99b3053b3130579e916eae",
+    "16/12601/25183.png": "50de0a8e75b5edec59d8c850990bfffcef45ac72beb5a9f374dd4dc8634a0cb2",
+    "16/12601/25184.png": "69f808ad776214561e34ef6147ea9dec95238326f191eb4a7b0490ca9687891c",
+    "16/12601/25185.png": "6b9f4e10df1fddcf74dd86c8af0177da7bdf92d5d0fc0cd4c91d74957e616136",
+    "16/12601/25186.png": "1ee16395ebbbb0cb4bf553ebfb43d6900fff6bc6471e90175b915620887b6737",
+    "16/12601/25187.png": "e669d2663515a753635fa8d099b0613257347da70595f351460a159486f8ce1a",
+    "16/12601/25188.png": "1c7a390a4f96601e2c63e5e953e40cc57465ca3d1eea083b24ea510c3959b817",
+    "16/12601/25189.png": "949409e65faae2eda6c041d76d80b25f0b7bcbfc1112eead1853e4d90506af97",
+    "16/12601/25190.png": "2c9f6bfa1aa743fecc30356d6ead5d9e4869dbd62c0fccb311c1df0cd03b2c53",
+    "16/12601/25191.png": "e70d48e09170ae732b535e1f678adee97d667909b0bfa2c5f0668da50b6b60a4",
+    "16/12602/25179.png": "0ae71993520c5327afba80a55fd3ecdebe4c236aed949e82c2c218dac2581115",
+    "16/12602/25180.png": "89edf074c7a0da35a1c1a1aa60d38a4245d33638a793071470d6a62e34b130a3",
+    "16/12602/25181.png": "3bbb65608716f1603c1cde316ed4a01e73f8a68ebcedba6224f674123f708e33",
+    "16/12602/25182.png": "feb02cec2af7f22f82b356f8de26b6a27d008d62ce1c3092175cee48181b474d",
+    "16/12602/25183.png": "8ef5976eeaf3f71186d9618fe95d89ea8bba47886f0868878af257373f0168fb",
+    "16/12602/25184.png": "0936b0b14f2c7ea9f543f0d8078e5330e43115234614b7cf7a5e014da297a860",
+    "16/12602/25185.png": "4ccb93ea62aa940d5051418c82a8955f9c6ca858746324bb86d8a7c6e4d3db04",
+    "16/12602/25186.png": "6c2d598960cfdce2aa72faa0feb1a5a822e35b0640c23077e52a8334895507f2",
+    "16/12602/25187.png": "efd2f2b70fd1d64d320b9a077b8749b44a30be8f8b30f896ea74182b667c96af",
+    "16/12602/25188.png": "a866321467477b5c0555ff385c13b916b3fe82fcad013cf3e09aacd7b8060ea3",
+    "16/12602/25189.png": "3a873052c876d1283338946f65e91d690c02e8151fe1da00a67e440801482859",
+    "16/12602/25190.png": "374c1f59f7e0e32649db63b93d22cd32e6ae31361460e23cb412f83a38b78602",
+    "16/12602/25191.png": "c42ec8d322ea93f0acc31691ebb05c3579374a0920ff1a6a15808335c9567b4d",
+    "16/12603/25179.png": "4c9029982277fe87edee7415a1088399b29edbbf36eac2ee912108b1f052d646",
+    "16/12603/25180.png": "6bab813a65f0d2df2d2266912896df54458e6daa92ea5792034bcfbc9a8e047e",
+    "16/12603/25181.png": "ab3eec67006db5272d7b095ffe1f661ee5da01a1107dac89c62138d1b728d0d1",
+    "16/12603/25182.png": "e8df16fda09d1dab6c1b1843e09c10fa2dd924f79843e5b1a63d65cb6ad2237e",
+    "16/12603/25183.png": "189e3ae2a31a84c75ecaa0856964630f44f08b591724efe1899e60ac17e8aae0",
+    "16/12603/25184.png": "90e2fa48dd5403fb8bf97aad0dc4fe48ec5c93fabba1609f783963e1fac16a8b",
+    "16/12603/25185.png": "4c3f38fb99220a026043aff6463f27f89fb221553bf1f3044e84e85bce80299e",
+    "16/12603/25186.png": "cba3d1dd0e33107ba3120d26abd74adadf60960b8bc41ac0fff68f9ccc0f4ec0",
+    "16/12603/25187.png": "8aee2689ef59ab579d238e1aa449a3f6ac4662e1f418caa143b8b94b787dafcc",
+    "16/12603/25188.png": "78cb2d3f69ff38c597cd742628549efa5d9156943ae8b6e10baccc219fe6cc45",
+    "16/12603/25189.png": "f57f4d43d25b42d1dbd1bf442dd330e5baed02c3bed461d5052f12bde7f79fa2",
+    "16/12603/25190.png": "c1312661e2e6b81572ce2f035f50728f7b4db7b2525d32feec546c9bf33bf01c",
+    "16/12603/25191.png": "916477e37afa2abc70e883b91bca948201a672cbc8031eba23d3786ea9db0098",
+    "16/12604/25179.png": "452963665b22b02ca4d63872d5da6695de7625015db17797903a1f805ac3ed8f",
+    "16/12604/25180.png": "b3e1bf0ab51088005f4cbec6cd6888ba008811212a27855759135f6b11f96868",
+    "16/12604/25181.png": "96b690d79a9179455b9cbd8b7a4f35f7531532e3f25c31a7a27a0977d495ffd0",
+    "16/12604/25182.png": "b912f0ddab601f3988abdd1f427ab292435277b142432b919a02707f81fc4e31",
+    "16/12604/25183.png": "6555fd886e1ce1cae5519dce0806a0dd42968926d3cf280d02dc3544c9bcd191",
+    "16/12604/25184.png": "066f0d2b7f3418a0fdf115c99e0bcba970e8719ba8caf84a00727051d1b1ea38",
+    "16/12604/25185.png": "21d7c2b7c67e592ee0b48fbaeb7d4f80335ec8610df19b69e9bfcf4437aeb4fe",
+    "16/12604/25186.png": "9e1b9668b6c4578b302a81c7b2372cc500c824b467b027455e59745899672476",
+    "16/12604/25187.png": "d1fcf888dab9dba53e2123b75889bef407b698cba1eb1b18ed026843dea1e9c8",
+    "16/12604/25188.png": "db8fc5a5cdafb3dc83f125dec0079043120a44698d4724cb7dadad561cb3584f",
+    "16/12604/25189.png": "2dead3f88dd98cba602e4c107ff02ef2d84bb5184c1382b12a2ececc127c0416",
+    "16/12604/25190.png": "eac567f1cd1dc7feba4a351dc1508d6d78c8e640c9fb97e59ab5cf2fe800bc4d",
+    "16/12604/25191.png": "927e06274291b8e9889e1fc4b4cb4e60587aa99cdc9ef74feb03a6bee00e0826",
+    "16/12605/25179.png": "62add0f195c87f1361fcb6fb3c17e125ed459704ec57189f17cfe750a5467817",
+    "16/12605/25180.png": "421a8e42574a3664e8248be65fb14a454024a89a1337fb264954b027eb994f63",
+    "16/12605/25181.png": "537189a0a59320e31eb5382f8faf40fa18169f5ee71d8974c89aaa34540467bc",
+    "16/12605/25182.png": "39e31088f4d251cbe90f51722ef3044adf472ae7ae0efa35e2d6b93febb7b569",
+    "16/12605/25183.png": "aff06787a934c154b1f8ca1fd2de9ef8246a72dc0a8121ceb4b425b315652694",
+    "16/12605/25184.png": "4d70180965de77c25afa8ed1e0fecff2346914c9227f756d79809af8a3be9380",
+    "16/12605/25185.png": "379528e446888360f0c091ac6f0a0b3ffa9833a8f008f51a21c3d05447ccc526",
+    "16/12605/25186.png": "4790d5c6544acd67b0e8ab1330766e9bd9d68e08a4926ff4b0d06600ddc63338",
+    "16/12605/25187.png": "a6bb51921437ffa2c328b0be0bce19705e8b827a100689c0042e1223bb2e911a",
+    "16/12605/25188.png": "5894db7711a5f1443a07ceabd212f635c6946154972b9dd3009ac495aceead7b",
+    "16/12605/25189.png": "f44a1fe3d043dfc0583949511f788cc7b1572f10a4c32fd3e6ab6381187bcafe",
+    "16/12605/25190.png": "2e77c014b54560816410555381b381ccbc7b30929db0165225c4e6c7db9bc22e",
+    "16/12605/25191.png": "749eb02f63d9c883aef892393cdccad64bb67eab9b28147f8eff39c543f2ccf2",
+    "16/12606/25179.png": "046ac3cfb9db6df17f8f150a73d8d5c2d5259a083f8d0d7c73b78bfcd3aa350a",
+    "16/12606/25180.png": "f2837601aee55f38f107240ecc8a062d9edfd988d5eddcf470f4bc7b87deba18",
+    "16/12606/25181.png": "442b960faf2a638f14177f46b5f5bcaaf6acb136845a52446fc71d4a10380aff",
+    "16/12606/25182.png": "7c95a29201d68fe7b9415716a433f08647c3466f5f0018c80aaf4664f5ccb0d4",
+    "16/12606/25183.png": "a50dc2bd2f04b9833cd6ca2ba6bfbf66dca6e47a2605a0b3c315841c94c92177",
+    "16/12606/25184.png": "936d7f506631b42e7f2e42a72121a429b2191e24077a6a143ca1f2bd88511de4",
+    "16/12606/25185.png": "4d1903148d26e66b3b0422d81134b1cc2cf11acd084227f259bc84b53792d99c",
+    "16/12606/25186.png": "e369d6f38465bde86244d6959746a9812101d374047be5fda49e0908756f210d",
+    "16/12606/25187.png": "8f2091d0cffe360180c7404d8deb743a90b979e146a2126978a34f72b67f6383",
+    "16/12606/25188.png": "ecc5212b18d4a6407b4082180068c7479bcc10457b63f5a80b6eb150bded8aa2",
+    "16/12606/25189.png": "c76d7e2eb0ddc56cec4afb195e6a6b9874cb4875d41305af1b85b97d07ba241d",
+    "16/12606/25190.png": "cbd94597c65c05feefa819c81494cfd9d71f4d49f12a4c725433a311b3f740f8",
+    "16/12606/25191.png": "8c5c54e279d5b4534a0afef34095a0ecc6bf24d7e6c895f108ea27abc8a9dfaa"
+  },
+  "gazebo_package": {
+    "source_dem_sha256": "8373f8cfd9a2c385cdd877d40a86607ff2b0b980c46e9cda3e99473852fa3948",
+    "source_metadata_sha256": "c528cdd9038d622f6d5cbe681a99e247459785e320d8e20186f421effa957986",
+    "export_script_sha256": "53e698373bb71f11d086fbefee1388dc6b21f330d801673651c1599fe28811a8",
+    "texture_sources": [
+      {
+        "file": "q3128_se_NAIP2024_RGB.tif",
+        "sha256": "90905b19cd2e0d746ba879086a140b5e962bbb45689ed15732d5c664a1a2224a"
+      },
+      {
+        "file": "q3129_sw_NAIP2024_RGB.tif",
+        "sha256": "92f0f209438fda3f1aa088b598d1aef6cfd3b9782448d5a88e718ff0502df304"
+      }
+    ],
+    "requested_area_fraction": 0.01,
+    "actual_area_fraction": 0.01,
+    "crop_pixel_window": [
+      3600,
+      4950,
+      800,
+      1100
+    ],
+    "crop_bounds_projected_m": [
+      519800.0,
+      4250475.0,
+      520200.0,
+      4251025.0
+    ],
+    "crop_size_m": [
+      400.0,
+      550.0
+    ],
+    "projected_crs_wkt": "PROJCS[\"NAD83(2011) / UTM zone 12N\",GEOGCS[\"NAD83(2011)\",DATUM[\"NAD83_National_Spatial_Reference_System_2011\",SPHEROID[\"GRS 1980\",6378137,298.257222101,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"1116\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"6318\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-111],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"6341\"]]",
+    "world_to_projected": {
+      "easting_offset_m": 520000.0,
+      "northing_offset_m": 4250750.0,
+      "elevation_offset_m": 1364.47998046875,
+      "rotation_rad": 0,
+      "scale": 1
+    },
+    "world_to_navigation_xy_offset_m": [
+      2000.000000033062,
+      250.0000000037253
+    ],
+    "mesh": {
+      "stride_pixels": 8,
+      "spacing_m": [
+        4.0,
+        4.0
+      ],
+      "triangles": 27600,
+      "vertices": 14039
+    },
+    "presentation": {
+      "view": "detail",
+      "peak_world_m": [
+        50.25,
+        129.25,
+        45.6600341796875
+      ],
+      "axes_origin_world_m": [
+        -19.75,
+        49.25,
+        29.1600341796875
+      ],
+      "axes_length_m": 20,
+      "axes_role": "visual-only XYZ metric reference; no collisions",
+      "camera_pose": [
+        -169.75000000000003,
+        -145.75,
+        156.17902221679688,
+        0.0,
+        0.34484687686572374,
+        0.8960553845713439
+      ],
+      "horizontal_fov_rad": 1.2
+    },
+    "limits": "Grid-aligned cropped simulation frame, not ENU or established live Nav2 TF; vertical datum unchanged; sampled surface; no vertical exaggeration; not a validated rover dynamics model",
+    "outputs": {
+      "dem.tif": "3e9c94b780721e723c8a1ca6d731cd36c89432b08fb2bbd17348bdbc54fb1fa1",
+      "model/mesh.json": "8c8164052d43da8ad688325723876e3b4325fcadfb9142e76ba2c17a46c60533",
+      "model/model.config": "4167072efe6f475d14a3d4a72d822d516770155721dea4f4ffbe58d7361ee147",
+      "model/model.sdf": "d35e3bdfc35f524faed2b7811c41d439a68e2a9a9371204fcf7d968509dfeb10",
+      "model/terrain.mtl": "32214f9b8d4d534b241d5a78792bad6c476cf23e55774e82d4f20546888ace62",
+      "model/terrain.obj": "9a7c6ee0debe2dbdf114314f57d790b07f646299defe6ad59013355c73909a6a",
+      "model/terrain.stl": "bc9efaae3ed9f3e962158e6f76db6cc2703c8bb3d114ed249bc5c1071424222c",
+      "model/texture.png": "f6f63146f6bbe85a4e74c0cd9afd0cce1957249001ee8b290415b1803abc87ce",
+      "world.sdf": "dbf3d66002db69fd4d6121f26aa2fac2d60cb194150d10abc5cf4fcf7becc229"
+    }
+  },
+  "gazebo_capture": {
+    "world_sha256": "dbf3d66002db69fd4d6121f26aa2fac2d60cb194150d10abc5cf4fcf7becc229",
+    "package_manifest_sha256": "09c8f046ad27e72fbee79bb0b2dc731df242927de7d03636cb59d8536c0d0530",
+    "capture_script_sha256": "7aa9f48b52f7df3cf8dc50ab4b7f0a289abc2d7c7c1de8ae190ea77a37146447",
+    "engine": "Gazebo Fortress camera sensor / OGRE2",
+    "version": "Gazebo Sim, version 6.18.0\nCopyright (C) 2018 Open Source Robotics Foundation.\nReleased under the Apache 2.0 License.",
+    "iterations": 5000,
+    "max_update_rate_hz": 250,
+    "elapsed_seconds": 23.2,
+    "exit_code": 0,
+    "frames": {
+      "overview_camera::camera_link::overview_0.png": "6c09e4a694c022bcd8ee0f4958f6f94aff75337ebb0d59a392a9c1b600194557",
+      "overview_camera::camera_link::overview_1.png": "5bbf8ee3e6ca741093b8c270932a7012dc483b430e14b12121f50306201604ea",
+      "overview_camera::camera_link::overview_2.png": "5bbf8ee3e6ca741093b8c270932a7012dc483b430e14b12121f50306201604ea",
+      "overview_camera::camera_link::overview_3.png": "5bbf8ee3e6ca741093b8c270932a7012dc483b430e14b12121f50306201604ea",
+      "overview_camera::camera_link::overview_4.png": "5bbf8ee3e6ca741093b8c270932a7012dc483b430e14b12121f50306201604ea",
+      "overview_camera::camera_link::overview_5.png": "5bbf8ee3e6ca741093b8c270932a7012dc483b430e14b12121f50306201604ea"
+    },
+    "scope": "Actual simulator camera render and world load; not rover dynamics validation"
+  },
+  "gazebo_camera_frame": {
+    "file": "overview_camera::camera_link::overview_5.png",
+    "sha256": "5bbf8ee3e6ca741093b8c270932a7012dc483b430e14b12121f50306201604ea"
+  },
+  "gazebo_card_presentation_crop_pixels": [
+    292,
+    202,
+    669,
+    720
+  ],
+  "assets": {
+    "elevation.png": {
+      "bytes": 72066,
+      "sha256": "87cbc5a44669416def13ddcdfb2b5f20cd4fc1b5b6dff29e1db955cc9b07d4f2",
+      "dimensions": [
+        368,
+        630
+      ]
+    },
+    "gazebo-camera.jpg": {
+      "bytes": 45964,
+      "sha256": "a49ba4122f685a927d2afb091cd476b3e7f2c157704372bad544a00c6991e62d",
+      "dimensions": [
+        960,
+        720
+      ]
+    },
+    "gazebo-terrain.jpg": {
+      "bytes": 30163,
+      "sha256": "e40341fa6dea23c4cc18c64502c37128a90d7fc6bcbe9e2096b56d992408761f",
+      "dimensions": [
+        368,
+        630
+      ]
+    },
+    "nav2-costmap.png": {
+      "bytes": 98643,
+      "sha256": "cceef42ec4aa82fdc86109e1f0613b0061df53101fb5e4080c9c2f36607604ca",
+      "dimensions": [
+        368,
+        630
+      ]
+    },
+    "pipeline-overview.jpg": {
+      "bytes": 245562,
+      "sha256": "70e6b28d25439420f8c6b622257db770c70a2b09932d22102c67e8118de77f17",
+      "dimensions": [
+        1536,
+        970
+      ]
+    },
+    "rgb-tiles.jpg": {
+      "bytes": 49777,
+      "sha256": "c6baf000e6833bcbd39fc31c9866c1605df68b7fb3905b26a566cd16d6efba27",
+      "dimensions": [
+        368,
+        630
+      ]
+    }
+  },
+  "versions": {
+    "gdal": "GDAL 3.4.1, released 2021/12/27",
+    "numpy": "1.24.4",
+    "pillow": "9.0.1"
+  }
+}

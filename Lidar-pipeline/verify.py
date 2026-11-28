@@ -191,7 +191,7 @@ class TerrainChecks(unittest.TestCase):
             local_hole = [518007.25-ax,4252992.25-ay]
             for line in lines:
                 if line.startswith('f '):
-                    indices = [int(i)-1 for i in line.split()[1:]]
+                    indices = [int(i.split('/')[0])-1 for i in line.split()[1:]]
                     tri = v[indices]
                     self.assertGreater(np.cross(tri[1]-tri[0],tri[2]-tri[0])[2], 0)
                     inside = (tri[:,0].min() <= local_hole[0] <= tri[:,0].max() and

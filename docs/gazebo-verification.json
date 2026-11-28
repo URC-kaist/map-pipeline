@@ -1,0 +1,43 @@
+{
+  "capture": {
+    "world_sha256": "dbf3d66002db69fd4d6121f26aa2fac2d60cb194150d10abc5cf4fcf7becc229",
+    "package_manifest_sha256": "09c8f046ad27e72fbee79bb0b2dc731df242927de7d03636cb59d8536c0d0530",
+    "capture_script_sha256": "7aa9f48b52f7df3cf8dc50ab4b7f0a289abc2d7c7c1de8ae190ea77a37146447",
+    "engine": "Gazebo Fortress camera sensor / OGRE2",
+    "version": "Gazebo Sim, version 6.18.0\nCopyright (C) 2018 Open Source Robotics Foundation.\nReleased under the Apache 2.0 License.",
+    "iterations": 5000,
+    "max_update_rate_hz": 250,
+    "elapsed_seconds": 23.2,
+    "exit_code": 0,
+    "frames": {
+      "overview_camera::camera_link::overview_0.png": "6c09e4a694c022bcd8ee0f4958f6f94aff75337ebb0d59a392a9c1b600194557",
+      "overview_camera::camera_link::overview_1.png": "5bbf8ee3e6ca741093b8c270932a7012dc483b430e14b12121f50306201604ea",
+      "overview_camera::camera_link::overview_2.png": "5bbf8ee3e6ca741093b8c270932a7012dc483b430e14b12121f50306201604ea",
+      "overview_camera::camera_link::overview_3.png": "5bbf8ee3e6ca741093b8c270932a7012dc483b430e14b12121f50306201604ea",
+      "overview_camera::camera_link::overview_4.png": "5bbf8ee3e6ca741093b8c270932a7012dc483b430e14b12121f50306201604ea",
+      "overview_camera::camera_link::overview_5.png": "5bbf8ee3e6ca741093b8c270932a7012dc483b430e14b12121f50306201604ea"
+    },
+    "scope": "Actual simulator camera render and world load; not rover dynamics validation"
+  },
+  "collision": {
+    "package_manifest_sha256": "09c8f046ad27e72fbee79bb0b2dc731df242927de7d03636cb59d8536c0d0530",
+    "verification_script_sha256": "ad5e36f299525a9e41c30b09b1046642cde5a3d06bc4b32c981f631bf57ca536",
+    "iterations": 6000,
+    "pose_samples": 352,
+    "exit_code": 0,
+    "initial_position_m": [
+      21.583333333333332,
+      -39.916666666666664,
+      27.703369
+    ],
+    "final_position_m": [
+      20.970999381451296,
+      -39.6086213657198,
+      25.44909185711946
+    ],
+    "mesh_height_at_final_xy_m": 25.199552061390744,
+    "sphere_radius_m": 0.25,
+    "final_clearance_m": 0.24953979572871532,
+    "scope": "One falling sphere supported by the exported STL in Gazebo/DART; not a complete mesh collision survey or rover dynamics validation"
+  }
+}

@@ -51,6 +51,16 @@ def export(result, output, stride=20, texture=None, formats='both'):
             faces.extend([(a,b,b+1), (a,b+1,a+1)])
     if not faces:
         raise ValueError('No fully valid mesh quads at this stride')
+    # Explicit smooth normals are required by OGRE2's mesh conversion path.
+    triangles = np.asarray(faces)
+    face_normals = np.cross(vertices[triangles[:, 1]]-vertices[triangles[:, 0]],
+                            vertices[triangles[:, 2]]-vertices[triangles[:, 0]])
+    normals = np.zeros_like(vertices)
+    for corner in range(3):
+        np.add.at(normals, triangles[:, corner], face_normals)
+    lengths = np.linalg.norm(normals, axis=1)
+    normals[lengths > 0] /= lengths[lengths > 0, None]
+    normals[lengths == 0] = [0, 0, 1]
     output.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='.mesh-', dir=output.parent) as tmp:
         work = Path(tmp)/'result'
@@ -84,9 +94,11 @@ def export(result, output, stride=20, texture=None, formats='both'):
                 if texture:
                     for u,v in uv:
                         f.write(f'vt {u:.9f} {v:.9f}\n')
+                for normal in normals:
+                    f.write('vn %.9f %.9f %.9f\n' % tuple(normal))
                 for face in faces:
                     ids = [i+1 for i in face]
-                    f.write('f '+' '.join(f'{i}/{i}' if texture else str(i) for i in ids)+'\n')
+                    f.write('f '+' '.join(f'{i}/{i}/{i}' if texture else f'{i}//{i}' for i in ids)+'\n')
             if texture:
                 (work/'terrain.mtl').write_text('newmtl aerial\nKd 1 1 1\nmap_Kd texture.png\n')
         if formats in ('stl','both'):

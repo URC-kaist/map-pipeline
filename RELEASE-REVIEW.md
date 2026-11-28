@@ -1,5 +1,12 @@
 # Release preparation status — 2026-11-14
 
+**2026-11-28 local addition:** the optional [Gazebo workflow](docs/GAZEBO.md)
+now packages a centered, RGB-textured terrain crop as a relocatable model/world.
+Real Fortress rendering and a falling-sphere collision check passed; see
+[evidence](docs/gazebo-verification.json). Compact real-output previews are
+documented under [docs/images](docs/images/README.md). This addition has been
+tested locally; no fresh-checkout or hosted CI result for it is claimed here.
+
 The earlier [review](docs/release-review-2026-11-14.md) is archived. Current changes:
 
 - RGB conversion and serving no longer require MapLibre, Node, or mr2-stack.

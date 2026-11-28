@@ -31,6 +31,10 @@ no data. Its HTTP socket must be permitted by the execution environment.
 
 Additional checks:
 
+- Optional [Gazebo terrain workflow](docs/GAZEBO.md): Gazebo Fortress 6.18.0,
+  Physics/Sensors/SceneBroadcaster plugins and OGRE2/OpenGL for rendering.
+  Mesh/world generation and synthetic checks need no simulator; actual capture
+  and collision checks are separate optional commands.
 - Real RGB dataset: `RGB-pipeline/verify.py` checks every PNG, source-coordinate
   controls, manifest hashes and HTTP routes; an optional demo is checked only
   when present.

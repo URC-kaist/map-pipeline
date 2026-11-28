@@ -1,7 +1,13 @@
 # Map Pipeline
 
-Reproducible offline map generation for the MR2 rover: bare-earth DEMs to
-terrain/Nav2 cost maps, and RGB imagery to dashboard XYZ tiles.
+Reproducible offline map generation for the MR2 rover: elevation to Nav2
+costmaps, RGB imagery to dashboard tiles, and elevation + RGB to Gazebo terrain.
+
+![Real MDRS outputs: elevation, Nav2 costmap, a centered RGB-textured Gazebo terrain crop, and offline RGB tiles.](docs/images/pipeline-overview.jpg)
+
+*Real `mdrs-expanded` outputs, reduced for illustration. Sources: UGRC/SGID and
+USDA NAIP; cropped, reprojected, sampled and recoloured. See
+[preview provenance, legends and data terms](docs/images/README.md).*
 
 Repository: **[URC-kaist/map-pipeline](https://github.com/URC-kaist/map-pipeline)**.
 Version: `0.1.0-dev`. The code license is intentionally [undecided](CODE-LICENSE.md).
@@ -17,18 +23,80 @@ The operating coordinates are specified in **URC 2027 rule 1.e.xiii**; the
 coverage document includes the supplied rule excerpt and distinguishes the
 approximate competition area from our additional margin.
 
+## Outputs at a glance
+
+The repository supports three workflows, sharing source preparation and the
+explicit map footprint:
+
+| Workflow | Implementation | Main artifacts |
+| --- | --- | --- |
+| **Elevation → Nav2 costmap** | [Lidar-pipeline/pipeline.py](Lidar-pipeline/README.md) | `occupancy.png` + `map.yaml`, DEM/features, metadata and manifest |
+| **RGB → offline tile map** | [RGB-pipeline/generate.py and serve.py](RGB-pipeline/README.md) | `site/tiles/naip/{z}/{x}/{y}.png`, tile metadata and local HTTP server |
+| **Elevation + RGB → Gazebo terrain** | [Lidar-pipeline/export_gazebo.py](docs/GAZEBO.md) | Textured OBJ/MTL/PNG, collision STL, model/world SDF and frame/provenance manifest |
+
+| Preview | Product and workflow |
+| --- | --- |
+| [Elevation](docs/images/elevation.png) | Mosaicked DEM, with a 0.5 m output grid and mixed 0.5/1 m source detail. |
+| [Nav2 costmap](docs/images/nav2-costmap.png) | Colour-mapped preview of the real raw cost PNG: 0–100 costs, 255 unknown. A configured terrain product, not proof of rover traversability. |
+| [Gazebo terrain](docs/images/gazebo-terrain.jpg) / [camera frame](docs/images/gazebo-camera.jpg) | [Simulation workflow](docs/GAZEBO.md): actual Gazebo render of a centered 400 × 550 m crop, with georeferenced RGB texture, OBJ visual and STL collision. |
+| [Offline RGB](docs/images/rgb-tiles.jpg) | [RGB processing and serving](RGB-pipeline/README.md), physical XYZ zooms 14–18. This preview samples actual tiles; it is not a dashboard integration screenshot. |
+
+The elevation, costmap and RGB previews share a 4 × 5.5 km footprint, with grid
+north up. Cyan outlines mark the smaller Gazebo crop. Reduced preview
+resolution hides small features and may hide the one-cell unknown border.
+The common presentation does not establish field registration; DEM, source RGB,
+Web Mercator tiles and local Nav2 poses retain their distinct coordinate contracts
+described below. [Capture and regeneration notes](docs/images/README.md) identify
+the real outputs and processing settings.
+
 ## Quickstart
 
-Install the [supported environment](ENVIRONMENT.md), then run from this root:
+Install the [supported environment](ENVIRONMENT.md). All commands below run
+from this repository root. Choose the workflow(s) you need.
+
+### Shared source preparation
 
 ```bash
 /usr/bin/python3 download_sources.py
 /usr/bin/python3 prepare_sources.py
 /usr/bin/python3 mosaic_dem.py
+```
+
+### 1. Elevation → Nav2 costmap
+
+```bash
 /usr/bin/python3 Lidar-pipeline/pipeline.py --output Lidar-pipeline/output/mdrs-expanded
+```
+
+Use the matched `occupancy.png` and `map.yaml` with the generated coordinate
+metadata. The display preview is not a navigation input.
+
+### 2. RGB → offline tile map
+
+```bash
 /usr/bin/python3 RGB-pipeline/generate.py
 /usr/bin/python3 RGB-pipeline/serve.py
 ```
+
+RGB uses the DEM mosaic's footprint; it does not require costmap generation.
+The server runs until Ctrl-C. MapLibre is an optional viewer, described below.
+
+### 3. Elevation + RGB → Gazebo terrain
+
+After workflow 1 has produced the DEM and coordinate metadata:
+
+```bash
+/usr/bin/python3 Lidar-pipeline/export_gazebo.py \
+  Lidar-pipeline/output/mdrs-expanded \
+  --output Lidar-pipeline/output/mdrs-gazebo-relief \
+  --texture RGB/q3128_se_NAIP2024_RGB.tif RGB/q3129_sw_NAIP2024_RGB.tif
+ign gazebo -r Lidar-pipeline/output/mdrs-gazebo-relief/world.sdf
+```
+
+Export needs no simulator. Viewing requires the optional Gazebo environment.
+The default simulation is a centered 400 × 550 m crop at true metric scale.
+It uses the original georeferenced RGB TIFFs, not the tile server or MapLibre.
+See [Gazebo capture, collision checks and frame mapping](docs/GAZEBO.md).
 
 The source downloader uses public HTTPS URLs and verifies SHA-256. Manual
 portal downloads are an alternative, subject to the same checksums. See
@@ -65,6 +133,8 @@ The demo's assets are bundled locally so no Internet is needed for viewing.
 
 - [Terrain pipeline](Lidar-pipeline/README.md): explicit projection/bounds/anchor,
   Horn slopes, validity masks, raw-mode Nav2 map and optional simulation meshes.
+- [Gazebo terrain](docs/GAZEBO.md): centered metric crop, georeferenced RGB
+  texture, model/world packaging, real camera capture and collision smoke check.
 - [RGB pipeline](RGB-pipeline/README.md): crop to the DEM outer footprint,
   EPSG:3857, north-origin XYZ, 256 px PNGs, physical zooms 14–18.
 - [Environment and tests](ENVIRONMENT.md): core versus optional dependencies.
@@ -89,12 +159,23 @@ sources.json, download_sources.py, prepare_sources.py
 mosaic_dem.py
 Lidar/                  # Original DEM ZIPs/extractions/mosaic, ignored
 RGB/                    # Original imagery ZIP/extraction, ignored
-Lidar-pipeline/          # Processing code/configs/tests and historical evidence
+Lidar-pipeline/          # Shared DEM/mesh code; Nav2 and Gazebo workflows
+  pipeline.py           # Elevation → features + Nav2 raw PNG/YAML
+  export_mesh.py        # Reusable OBJ/STL + georeferenced texture export
+  export_gazebo.py      # Elevation + RGB → cropped terrain model/world
+  capture_gazebo.py     # Optional simulator camera capture
+  verify_gazebo.py      # Optional simulator collision smoke check
+  output/               # Generated Nav2/Gazebo artifacts, ignored
+    mdrs-expanded/      # DEM, occupancy.png, map.yaml, metadata/manifest
+    mdrs-gazebo-relief/  # world.sdf, model/, cropped DEM, gazebo.json
 RGB-pipeline/            # Processing, static server and optional demo
+  generate.py, serve.py  # RGB → XYZ tiles; local HTTP serving
   build_viewer.py        # The only generation step requiring MapLibre assets
   output/               # Generated tiles/site/intermediates, ignored
-Lidar-pipeline/output/   # Generated terrain products, ignored
 docs/                   # Source metadata, history and release evidence
+  GAZEBO.md             # Gazebo generation, import, capture and checks
+  images/               # Selected compact previews + provenance only
+  prepare_previews.py   # Assemble poster from retained real outputs
 tests/                  # Small synthetic integration checks
 ```
 
