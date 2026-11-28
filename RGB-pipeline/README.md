@@ -1,5 +1,10 @@
 # Cropped offline RGB tile pipeline
 
+This is the **RGB → offline tile map** workflow. It uses original RGB TIFFs and
+the DEM mosaic's footprint, with no dependency on Nav2 costmap generation or
+Gazebo. The separate [Elevation + RGB → Gazebo workflow](../docs/GAZEBO.md)
+reads the original TIFFs too; it does not require this tile pyramid or server.
+
 **Current expanded profile (2026-11-17):** see the root
 [expanded coverage record](../docs/EXPANDED-COVERAGE.md). It supersedes the original dimensions/source counts below; those describe
 the initial 2018-only validation. Current commands use the expanded inputs.
@@ -11,7 +16,7 @@ modified. Sources remain in `../RGB/` and `../Lidar/`.
 
 ## Run and preview
 
-From `map-pipeline-testing/RGB-pipeline/`:
+From the repository's `RGB-pipeline/` directory:
 
 ```bash
 /usr/bin/python3 generate.py
@@ -50,7 +55,7 @@ Network access is unnecessary for generation once sources are downloaded.
 
 ## Procedure and products
 
-1. Read the RGB TIFF's actual CRS, EPSG:26912 (NAD83 / UTM zone 12N).
+1. Read the source RGB TIFFs' actual CRS, EPSG:26912 (NAD83 / UTM zone 12N).
 2. Read the stitched DEM's outer extent in its own EPSG:6341 CRS. Write a
    georeferenced, densified polygon to `work/crop.gpkg`.
 3. Crop/reproject with GDAL using that polygon into an RGBA Web Mercator
@@ -58,8 +63,8 @@ Network access is unnecessary for generation once sources are downloaded.
    resolution is the z18 Web Mercator grid spacing (about 0.597 projected
    metres/pixel, about 0.468 ground m/pixel at MDRS). Grid edges are aligned.
 4. Run GDAL2Tiles with **XYZ, 256 px PNG, zooms 14–18**, average pyramid
-   resampling and four workers. Retain fully transparent tiles so requests in
-   the uncovered eastern strip return valid blank PNGs instead of 404s.
+   resampling and four workers. Retain fully transparent tiles so masked parts
+   within the generated tile range return blank PNGs instead of 404s.
 5. Generate bounds/zoom metadata and a manifest with settings,
    source hashes, output hashes, counts, byte size, timing and versions.
 

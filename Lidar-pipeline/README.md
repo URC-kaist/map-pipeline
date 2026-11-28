@@ -1,5 +1,17 @@
 # Reproducible terrain and navigation maps
 
+This directory implements two workflows that share DEM processing:
+
+| Workflow | Entry point | Outputs |
+| --- | --- | --- |
+| Elevation → Nav2 costmap | `pipeline.py` | DEM/features, `occupancy.png`, `map.yaml`, coordinate metadata and manifest |
+| Elevation + RGB → Gazebo terrain | `export_gazebo.py` using `export_mesh.py` | Centered DEM crop, textured visual OBJ, collision STL, model/world SDF and provenance |
+
+The [RGB → offline tiles workflow](../RGB-pipeline/README.md) lives in the
+sibling `RGB-pipeline/` directory. Gazebo reuses this directory's DEM/mesh code
+and reads the original georeferenced RGB TIFFs; it does not depend on generated
+XYZ tiles. See [Gazebo instructions](../docs/GAZEBO.md) for the complete setup.
+
 ## Annotated slope review copy
 
 To mark MDRS at the supplied Google Maps coordinates **38.4053, -110.7900**
@@ -43,9 +55,11 @@ features, a Nav2 cost map, metadata and optional simulation meshes. All
 processing uses local files and runs offline.
 
 The original implementation and its discrepancies are recorded in
-[legacy-audit.md](legacy-audit.md). The original repository remains unchanged.
-This is a validated local setup; RGB dashboard tile generation, rover-frame
-alignment, final project cleanup and GitHub publication remain later work.
+[legacy-audit.md](legacy-audit.md). The original implementation is retained in
+the archived lidar repository.
+RGB tile generation is implemented in the sibling workflow; this repository
+supersedes the archived lidar repository. Live rover-frame alignment and
+dashboard/Nav2 deployment remain separate integration work.
 
 ## Files and dependencies
 
@@ -55,6 +69,9 @@ Lidar-pipeline/
 ├── legacy-audit.md
 ├── pipeline.py             # DEM/point cloud → features → Nav2 map
 ├── export_mesh.py          # Optional OBJ/STL and local RGB texture
+├── export_gazebo.py        # DEM + RGB → centered model/world package
+├── capture_gazebo.py       # Optional real simulator camera capture
+├── verify_gazebo.py        # Optional actual collision smoke check
 ├── verify.py               # Analytic, mask, geometry and integration checks
 ├── check_nav2.py           # Optional native Nav2 library roundtrip
 ├── check_nav2.cpp
@@ -80,7 +97,7 @@ environment must pair its GDAL Python bindings with its GDAL library.
 
 ## Run with the downloaded DEMs
 
-From `map-pipeline-testing/`, first build the source mosaic if absent:
+From the repository root, first build the source mosaic if absent:
 
 ```bash
 /usr/bin/python3 mosaic_dem.py
@@ -208,6 +225,12 @@ ingestion tuning needs the original acquisition metadata. The verified default
 uses published bare-earth DEMs and has no PDAL interpolation stage.
 
 ## Optional simulation mesh and texture
+
+For a complete small offline Gazebo world, use the
+[Gazebo export/view/capture workflow](../docs/GAZEBO.md). It crops the central
+1/100 area at true metric scale, supports multiple georeferenced RGB inputs,
+and packages OBJ visual + STL collision + model/world SDF. The mesh-only
+exporter below remains available for custom consumers.
 
 For example, on the AEQD result:
 
